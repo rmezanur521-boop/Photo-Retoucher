@@ -1,0 +1,46 @@
+import { useRoutes } from "react-router-dom";
+import { ROUTES } from "@/constants/routes";
+
+import MainLayout from "@/app/layouts/MainLayout";
+
+import Home from "@/app/pages/Home";
+import About from "@/app/pages/About";
+import Contact from "@/app/pages/Contact";
+import Login from "@/app/pages/Login";
+import Register from "@/app/pages/Register";
+import DataForm from "@/app/pages/DataForm";
+import Portfolio from "@/app/pages/Portfolio";
+import HowItWorks from "@/app/pages/HowItWorks";
+import Pricing from "@/app/pages/Pricing";
+import Blogs from "@/app/pages/Blogs";
+//import BlogDetails from "@/app/pages/BlogDetails";
+import ServiceDetails from "@/app/pages/ServiceDetails";
+import Privacy from "@/app/pages/Privacy";
+
+const AppRoutes = () => {
+  const routes = useRoutes([
+    {
+      path: ROUTES.HOME,
+      element: <MainLayout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "about", element: <About /> },
+        { path: "contact", element: <Contact /> },
+        { path: "login", element: <Login /> },
+        { path: "register", element: <Register /> },
+        { path: "register/details", element: <DataForm /> },
+        { path: "portfolio", element: <Portfolio /> },
+        { path: "how-it-works", element: <HowItWorks /> },
+        { path: "pricing", element: <Pricing /> },
+        { path: "blog", element: <Blogs /> },
+        //{ path: "blog/:blogId", element: <BlogDetails /> },
+        { path: "services/:serviceId", element: <ServiceDetails /> },
+        { path: "privacy-policy", element: <Privacy /> },
+      ],
+    },
+  ]);
+
+  return routes;
+};
+
+export default AppRoutes;

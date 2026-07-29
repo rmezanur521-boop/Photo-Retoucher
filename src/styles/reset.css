@@ -1,3 +1,15 @@
+:root {
+  --color-primary: #2e4cf6;
+  --color-primary-dark: #1b2fbf;
+  --color-secondary: #0f1b4c;
+  --color-accent: #fdbb2d;
+  --color-text-dark: #1a1a2e;
+  --color-text-muted: #6b7280;
+  --color-bg-light: #f4f6fb;
+  --color-bg-soft: #eaf0ff;
+  --color-white: #ffffff;
+  --color-border: #e2e8f0;
+}
 * {
   margin: 0;
   padding: 0;
