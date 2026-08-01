@@ -127,7 +127,13 @@
 .menuToggle {
   display: none;
 }
+.dropdownTrigger svg {
+  transition: transform 0.2s ease;
+}
 
+.chevronOpen {
+  transform: rotate(180deg);
+}
 @media (max-width: 992px) {
   .navLinks {
     position: absolute;

@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Minus, Plus, ShieldCheck, ArrowRight } from "lucide-react";
+import { Minus, Plus, ShieldCheck, ArrowRight, Zap, BadgePercent } from "lucide-react";
 import {
   CALCULATOR_SERVICES,
   TURNAROUND_OPTIONS,
@@ -50,6 +50,7 @@ const PricingCalculator = () => {
           heading="Calculate Your"
           highlight="Editing Price"
           subtext="From simple clipping paths to advanced photo retouching, outsourced image editing services are ideal if you are..."
+          divider
         />
 
         <div className={styles.panels}>
@@ -69,6 +70,9 @@ const PricingCalculator = () => {
                   </option>
                 ))}
               </select>
+              {selectedService.description && (
+                <p className={styles.fieldHint}>{selectedService.description}</p>
+              )}
             </div>
 
             <div className={styles.field}>
@@ -76,21 +80,32 @@ const PricingCalculator = () => {
                 <span className={styles.stepNumber}>2</span> Select Turnaround Time
               </label>
               <div className={styles.turnaroundGrid}>
-                {TURNAROUND_OPTIONS.map((option) => (
-                  <button
-                    key={option.id}
-                    type="button"
-                    className={`${styles.turnaroundCard} ${
-                      turnaroundId === option.id ? styles.turnaroundActive : ""
-                    }`}
-                    onClick={() => setTurnaroundId(option.id)}
-                  >
-                    <span className={styles.turnaroundLabel}>{option.label}</span>
-                    <span className={styles.turnaroundPrice}>
-                      ${(selectedService.basePrice * option.multiplier).toFixed(2)}/Image
-                    </span>
-                  </button>
-                ))}
+                {TURNAROUND_OPTIONS.map((option) => {
+                  const isActive = turnaroundId === option.id;
+                  return (
+                    <button
+                      key={option.id}
+                      type="button"
+                      className={`${styles.turnaroundCard} ${
+                        isActive ? styles.turnaroundActive : ""
+                      }`}
+                      onClick={() => setTurnaroundId(option.id)}
+                    >
+                      <span
+                        className={`${styles.radioDot} ${
+                          isActive ? styles.radioDotActive : ""
+                        }`}
+                      />
+                      <span className={styles.turnaroundIcon}>
+                        <Zap size={16} />
+                      </span>
+                      <span className={styles.turnaroundLabel}>{option.label}</span>
+                      <span className={styles.turnaroundPrice}>
+                        ${(selectedService.basePrice * option.multiplier).toFixed(2)}/Image
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
@@ -99,55 +114,65 @@ const PricingCalculator = () => {
                 <span className={styles.stepNumber}>3</span> Number of Photos
               </label>
 
-              <div className={styles.stepper}>
-                <button
-                  type="button"
-                  onClick={() => updatePhotoCount(photoCount - 1)}
-                  aria-label="Decrease photo count"
-                >
-                  <Minus size={16} />
-                </button>
-                <input
-                  type="number"
-                  className={styles.stepperInput}
-                  value={photoCount}
-                  onChange={(event) =>
-                    updatePhotoCount(Number(event.target.value) || 0)
-                  }
-                />
-                <button
-                  type="button"
-                  onClick={() => updatePhotoCount(photoCount + 1)}
-                  aria-label="Increase photo count"
-                >
-                  <Plus size={16} />
-                </button>
-              </div>
+              <div className={styles.numberRow}>
+                <div className={styles.stepper}>
+                  <button
+                    type="button"
+                    onClick={() => updatePhotoCount(photoCount - 1)}
+                    aria-label="Decrease photo count"
+                  >
+                    <Minus size={16} />
+                  </button>
+                  <input
+                    type="number"
+                    className={styles.stepperInput}
+                    value={photoCount}
+                    onChange={(event) =>
+                      updatePhotoCount(Number(event.target.value) || 0)
+                    }
+                  />
+                  <button
+                    type="button"
+                    onClick={() => updatePhotoCount(photoCount + 1)}
+                    aria-label="Increase photo count"
+                  >
+                    <Plus size={16} />
+                  </button>
+                </div>
 
-              <input
-                type="range"
-                min={MIN_PHOTOS}
-                max={MAX_PHOTOS}
-                value={photoCount}
-                onChange={(event) => updatePhotoCount(Number(event.target.value))}
-                className={styles.rangeInput}
-                aria-label="Number of photos"
-              />
+                <div className={styles.sliderWrapper}>
+                  <input
+                    type="range"
+                    min={MIN_PHOTOS}
+                    max={MAX_PHOTOS}
+                    value={photoCount}
+                    onChange={(event) => updatePhotoCount(Number(event.target.value))}
+                    className={styles.rangeInput}
+                    aria-label="Number of photos"
+                  />
 
-              <div className={styles.rangeMarks}>
-                <span>1</span>
-                <span>100</span>
-                <span>200</span>
-                <span>300</span>
-                <span>500</span>
+                  <div className={styles.rangeMarks}>
+                    <span>1</span>
+                    <span>100</span>
+                    <span>200</span>
+                    <span>300</span>
+                    <span>500</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             {hasDiscount && (
               <div className={styles.discountBanner}>
-                <span>
-                  Bulk Discount Applied — You&apos;re saving {BULK_DISCOUNT_PERCENT}%
-                  on the base price of {photoCount} images.
+                <span className={styles.discountIcon}>
+                  <BadgePercent size={18} />
+                </span>
+                <span className={styles.discountText}>
+                  <strong>Bulk Discount Applied</strong>
+                  <span>
+                    You&apos;re saving {BULK_DISCOUNT_PERCENT}% on the base price of{" "}
+                    {photoCount} images.
+                  </span>
                 </span>
                 <span className={styles.discountBadge}>
                   {BULK_DISCOUNT_PERCENT}% OFF
@@ -194,7 +219,9 @@ const PricingCalculator = () => {
             </div>
 
             <p className={styles.secureNote}>
-              <ShieldCheck size={16} />
+              <span className={styles.secureIcon}>
+                <ShieldCheck size={14} />
+              </span>
               Secure, reliable and 100% quality guaranteed
             </p>
 
@@ -207,7 +234,12 @@ const PricingCalculator = () => {
               Get My Image Edit
             </Button>
 
-            <Button to={ROUTES.CONTACT} variant="outline" fullWidth>
+            <Button
+              to={ROUTES.CONTACT}
+              variant="outline"
+              fullWidth
+              icon={<ArrowRight size={16} />}
+            >
               Request Custom Quote
             </Button>
           </div>

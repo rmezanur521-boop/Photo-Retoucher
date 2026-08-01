@@ -1,13 +1,39 @@
 export const CALCULATOR_SERVICES = [
-  { id: "clipping-path", label: "Clipping Path", basePrice: 0.25 },
-  { id: "background-removal", label: "Background Removal", basePrice: 0.2 },
-  { id: "image-masking", label: "Image Masking", basePrice: 0.3 },
-  { id: "ghost-mannequin", label: "Ghost Mannequin", basePrice: 0.35 },
-  { id: "jewelry-retouching", label: "Jewelry Retouching", basePrice: 0.35 },
+  {
+    id: "clipping-path",
+    label: "Clipping Path",
+    basePrice: 0.25,
+    description: "Precise clipping paths for perfect product isolation.",
+  },
+  {
+    id: "background-removal",
+    label: "Background Removal",
+    basePrice: 0.2,
+    description: "Clean background removal for any product or portrait photo.",
+  },
+  {
+    id: "image-masking",
+    label: "Image Masking",
+    basePrice: 0.3,
+    description: "Advanced masking for fine details like hair and fur.",
+  },
+  {
+    id: "ghost-mannequin",
+    label: "Ghost Mannequin",
+    basePrice: 0.35,
+    description: "Invisible mannequin effect for a natural, 3D garment look.",
+  },
+  {
+    id: "jewelry-retouching",
+    label: "Jewelry Retouching",
+    basePrice: 0.35,
+    description: "High-end retouching that makes jewelry shine and sparkle.",
+  },
   {
     id: "ecommerce-photo-editing",
     label: "Ecommerce Photo Editing",
     basePrice: 0.25,
+    description: "Marketplace-ready edits that meet listing standards.",
   },
 ];
 

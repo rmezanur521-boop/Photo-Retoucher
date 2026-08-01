@@ -6,9 +6,14 @@ import styles from "./CtaBanner.module.css";
 const CtaBanner = () => {
   return (
     <section className={styles.banner}>
+      <div className={styles.overlay} />
+
       <div className={styles.container}>
         <div className={styles.left}>
-          <span className={styles.tagline}>Your best work. Our Editing.</span>
+          <span className={styles.tagline}>
+            Your best work. Our Editing.
+            <span className={styles.taglineUnderline} />
+          </span>
           <h2 className={styles.heading}>
             Ready to save time and scale your business?
           </h2>

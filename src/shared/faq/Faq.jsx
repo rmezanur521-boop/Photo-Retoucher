@@ -37,7 +37,7 @@ const Faq = () => {
 
           <div className={styles.supportCard}>
             <span className={styles.supportIcon}>
-              <img src="/assets/icons/faq-support.svg" alt="" />
+              <img src="/assets/icons/headphones.svg" alt="" />
             </span>
             <div>
               <p className={styles.supportTitle}>Still have question?</p>

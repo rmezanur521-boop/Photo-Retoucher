@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ChevronDown, Search, Menu, X, ArrowRight } from "lucide-react";
 import { ROUTES } from "@/constants/routes";
@@ -18,9 +18,20 @@ const NAV_LINKS = [
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   return (
     <header className={styles.navbar}>
       <div className={styles.container}>
@@ -48,12 +59,18 @@ const Navbar = () => {
         >
           <div
             className={styles.dropdown}
-            onMouseEnter={() => setIsServicesOpen(true)}
-            onMouseLeave={() => setIsServicesOpen(false)}
+            ref={dropdownRef}
           >
-            <button className={styles.dropdownTrigger} type="button">
+            <button
+              className={styles.dropdownTrigger}
+              type="button"
+              onClick={() => setIsServicesOpen((prev) => !prev)}
+            >
               Our Services
-              <ChevronDown size={16} />
+              <ChevronDown
+                size={16}
+                className={isServicesOpen ? styles.chevronOpen : ""}
+              />
             </button>
 
             {isServicesOpen && (
@@ -63,7 +80,10 @@ const Navbar = () => {
                     <Link
                       to={`/services/${service.id}`}
                       className={styles.dropdownItem}
-                      onClick={closeMobileMenu}
+                      onClick={() => {
+                        closeMobileMenu();
+                        setIsServicesOpen(false);
+                      }}
                     >
                       {service.label}
                     </Link>

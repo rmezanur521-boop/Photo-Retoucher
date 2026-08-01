@@ -1,6 +1,5 @@
 import { WHY_CHOOSE_US_ITEMS } from "@/constants/whyChooseUsData";
 import SectionTitle from "@/shared/section-title/SectionTitle";
-import FeatureCard from "@/shared/cards/FeatureCard";
 import styles from "./WhyChooseUs.module.css";
 
 const WhyChooseUs = () => {
@@ -16,12 +15,21 @@ const WhyChooseUs = () => {
 
         <div className={styles.grid}>
           {WHY_CHOOSE_US_ITEMS.map((item) => (
-            <FeatureCard
-              key={item.id}
-              icon={`/assets/icons/why-choose/${item.id}.svg`}
-              title={item.title}
-              description={item.description}
-            />
+            <div key={item.id} className={styles.card}>
+              <img
+                src={`/assets/icons/why-choose/${item.id}.svg`}
+                alt={item.title}
+                className={styles.icon}
+              />
+              <h3 className={styles.title}>{item.title}</h3>
+              <p className={styles.description}>{item.description}</p>
+              {item.linkText && (
+                <a href={item.linkHref || "#"} className={styles.link}>
+                  {item.linkText}
+                </a>
+              )}
+              <span className={styles.underline} />
+            </div>
           ))}
         </div>
       </div>

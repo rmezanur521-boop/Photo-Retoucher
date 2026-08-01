@@ -26,8 +26,9 @@ const Footer = () => {
               className={styles.logoIcon}
             />
             <span className={styles.logoText}>
-              <span className={styles.logoTop}>Photo</span>
-              <span className={styles.logoBottom}>Retoucher</span>
+               <img
+              src="/assets/logos/logo-text.svg"
+            />
             </span>
           </Link>
 

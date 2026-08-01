@@ -14,7 +14,7 @@ export const TESTIMONIALS = [
     id: "t2",
     company: "Nova Retail Group",
     website: "www.novaretail.com",
-    logo: "nova-retail.jpg",
+    logo: "dutch-design.jpg",
     review:
       "Working with this team completely changed how we handle product photography. Turnaround times are fast and the quality is consistently excellent across thousands of images.",
     reviewerName: "Amelia Chen",
@@ -25,7 +25,7 @@ export const TESTIMONIALS = [
     id: "t3",
     company: "Studio Loom",
     website: "www.studioloom.com",
-    logo: "studio-loom.jpg",
+    logo: "dutch-design.jpg",
     review:
       "The clipping path and retouching quality is spot on every single time. It's freed up our in-house designers to focus on bigger creative projects instead of repetitive edits.",
     reviewerName: "Marcus Reed",
@@ -36,7 +36,7 @@ export const TESTIMONIALS = [
     id: "t4",
     company: "Bright Commerce Co.",
     website: "www.brightcommerce.com",
-    logo: "bright-commerce.jpg",
+    logo: "dutch-design.jpg",
     review:
       "Bulk order support and transparent pricing made scaling our catalog painless. Support responds quickly whenever we have a special request.",
     reviewerName: "Priya Nair",

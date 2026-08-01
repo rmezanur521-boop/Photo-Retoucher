@@ -6,6 +6,7 @@ const SectionTitle = ({
   highlight,
   subtext,
   align = "center",
+  divider = false,
 }) => {
   return (
     <div className={`${styles.wrapper} ${styles[align]}`}>
@@ -14,6 +15,7 @@ const SectionTitle = ({
         {heading} {highlight && <span className={styles.highlight}>{highlight}</span>}
       </h2>
       {subtext && <p className={styles.subtext}>{subtext}</p>}
+      {divider && <span className={styles.divider} />}
     </div>
   );
 };

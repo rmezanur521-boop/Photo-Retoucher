@@ -1,6 +1,6 @@
 .whyChooseUs {
   padding: 80px 24px;
-  background-color: var(--color-white);
+  background-color: var(--color-bg-soft);
 }
 
 .container {
@@ -12,6 +12,55 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin-top: 48px;
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 36px 28px 28px;
+  box-shadow: 0 10px 30px rgba(15, 27, 76, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  margin: 0 auto 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.link {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--color-primary);
+  text-decoration: underline;
+  margin-top: 6px;
+  width: fit-content;
+}
+
+.underline {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  margin-top: 16px;
 }
 
 @media (max-width: 900px) {
