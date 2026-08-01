@@ -19,16 +19,6 @@ const Privacy = () => {
 
       <section className={styles.section}>
         <div className={styles.container}>
-          <p className={styles.effectiveDate}>Effective as of August 22, 2021</p>
-
-          <p className={styles.paragraph}>
-            Thank you for choosing Photo Retoucher Ltd (&quot;Path&quot;,
-            &quot;we&quot;, &quot;us&quot;, &quot;our&quot;). By signing up or
-            otherwise visiting, using, or engaging with our website and
-            services, this Privacy Policy explains how we use any personal
-            information we collect about you when you use this site.
-          </p>
-
           {PRIVACY_SECTIONS.map((section) => (
             <div key={section.id} className={styles.sectionBlock}>
               <h2 className={styles.sectionTitle}>{section.title}</h2>
