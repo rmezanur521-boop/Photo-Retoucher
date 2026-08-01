@@ -1,0 +1,59 @@
+.steps {
+  padding: 60px 24px 80px;
+  background-color: var(--color-white);
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.stepItem {
+  display: flex;
+  gap: 24px;
+}
+
+.stepMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.stepNumber {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepLine {
+  width: 2px;
+  flex: 1;
+  background-color: var(--color-border);
+  margin: 6px 0;
+}
+
+.stepContent {
+  padding-bottom: 40px;
+}
+
+.stepTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 8px;
+}
+
+.stepDescription {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 520px;
+}
