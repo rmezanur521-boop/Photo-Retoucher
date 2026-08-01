@@ -1,6 +1,7 @@
 import { useRoutes } from "react-router-dom";
 import { ROUTES } from "@/constants/routes";
 
+import AuthPageLayout from "@/app/layouts/AuthPageLayout";
 import MainLayout from "@/app/layouts/MainLayout";
 
 import Home from "@/app/pages/Home";
@@ -20,15 +21,20 @@ import Privacy from "@/app/pages/Privacy";
 const AppRoutes = () => {
   const routes = useRoutes([
     {
+      element: <AuthPageLayout />,
+      children: [
+        { path: ROUTES.LOGIN, element: <Login /> },
+        { path: ROUTES.REGISTER, element: <Register /> },
+        { path: "register/details", element: <DataForm /> },
+      ],
+    },
+    {
       path: ROUTES.HOME,
       element: <MainLayout />,
       children: [
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         { path: "contact", element: <Contact /> },
-        { path: "login", element: <Login /> },
-        { path: "register", element: <Register /> },
-        { path: "register/details", element: <DataForm /> },
         { path: "portfolio", element: <Portfolio /> },
         { path: "how-it-works", element: <HowItWorks /> },
         { path: "pricing", element: <Pricing /> },

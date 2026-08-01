@@ -143,6 +143,7 @@
 
 .discountBanner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
@@ -235,10 +236,6 @@
   flex-shrink: 0;
 }
 
-.estimatePanel .button {
-  margin-bottom: 4px;
-}
-
 @media (max-width: 900px) {
   .panels {
     grid-template-columns: 1fr;
@@ -246,6 +243,15 @@
 }
 
 @media (max-width: 480px) {
+  .calculator {
+    padding: 50px 20px;
+  }
+
+  .formPanel,
+  .estimatePanel {
+    padding: 20px;
+  }
+
   .turnaroundGrid {
     grid-template-columns: 1fr;
   }

@@ -155,9 +155,26 @@
   .container {
     grid-template-columns: 1fr;
   }
+
+  .faq {
+    padding: 60px 20px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .subtext,
+  .supportCard {
+    max-width: 100%;
+  }
+
+  .accordionItem {
+    padding: 16px 18px;
+  }
+
   .answer {
     padding-left: 0;
   }

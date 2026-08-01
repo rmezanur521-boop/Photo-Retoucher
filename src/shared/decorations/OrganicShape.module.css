@@ -1,9 +1,20 @@
 .shape {
   position: absolute;
-  z-index: 0;
-  width: 150px;
-  height: auto;
   pointer-events: none;
+  user-select: none;
+  height: auto;
+  flex-shrink: 0;
+}
+
+
+.topLeft {
+  top: 0;
+  left: 0;
+}
+
+.topRight {
+  top: 0;
+  right: 0;
 }
 
 .bottomLeft {
@@ -11,26 +22,7 @@
   left: 0;
 }
 
-.topRight {
-  top: 0;
-  right: 0;
-  transform: rotate(180deg);
-}
-
-.topLeft {
-  top: 0;
-  left: 0;
-  transform: scaleX(-1);
-}
-
 .bottomRight {
   bottom: 0;
   right: 0;
-  transform: scaleX(-1) rotate(180deg);
-}
-
-@media (max-width: 768px) {
-  .shape {
-    width: 90px;
-  }
 }

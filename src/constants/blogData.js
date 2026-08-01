@@ -31,3 +31,24 @@ export const BLOG_TAGS = [
   "Photo Retouching",
   "Product Photography",
 ];
+
+export const QUALITY_WORKFLOW_STEPS = [
+  {
+    id: "upload",
+    title: "Upload",
+    description: "We receive and organize your images securely.",
+  },
+  {
+    id: "hand-edit",
+    title: "Hand-Edit",
+    description: "Our expert retouchers carefully enhance each image by hand.",
+  },
+  {
+    id: "review-deliver",
+    title: "Review & Deliver",
+    description:
+      "We review for quality and deliver final images on time, every time.",
+  },
+];
+
+export const QUALITY_WORKFLOW_FORMATS = ["JPG", "GIF", "TIFF", "PNG"];

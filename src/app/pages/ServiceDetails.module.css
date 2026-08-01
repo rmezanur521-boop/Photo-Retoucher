@@ -82,8 +82,20 @@
 }
 
 @media (max-width: 576px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
   .actions {
     flex-direction: column;
+  }
+
+  .actions > * {
+    width: 100%;
   }
 
   .grid {

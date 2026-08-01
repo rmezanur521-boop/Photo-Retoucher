@@ -6,6 +6,7 @@ import {
   BLOG_TAGS,
 } from "@/constants/blogData";
 import BlogCard from "@/features/blog/BlogCard";
+import QualityWorkflowDiagram from "@/features/blog/QualityWorkflowDiagram";
 import styles from "./BlogDetails.module.css";
 
 const BlogDetails = () => {
@@ -16,6 +17,9 @@ const BlogDetails = () => {
     0,
     3
   );
+
+  const processExplanationText =
+    "A professional service should be able to explain the process clearly – who edits the image, who reviews it, and what happens before delivery.";
 
   return (
     <main>
@@ -66,17 +70,10 @@ const BlogDetails = () => {
               delivery. If the answer is vague, that tells you a lot.
             </p>
 
-            <img
-              src="/assets/images/blog/workflow-diagram.jpg"
-              alt="Quality control workflow"
-              className={styles.diagramImage}
-            />
+            <QualityWorkflowDiagram />
 
-            <p>
-              A professional service should be able to explain the process
-              clearly — who edits the image, who reviews it, and what
-              happens before delivery.
-            </p>
+            <p>{processExplanationText}</p>
+            <p>{processExplanationText}</p>
 
             <div className={styles.tags}>
               {BLOG_TAGS.map((tag) => (

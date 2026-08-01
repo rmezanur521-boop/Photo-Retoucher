@@ -101,10 +101,6 @@
   border-radius: 14px;
 }
 
-.diagramImage {
-  width: 100%;
-  border-radius: 14px;
-}
 
 .tags {
   display: flex;
@@ -152,6 +148,25 @@
 
   .sidebar {
     position: static;
+  }
+
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 24px;
   }
 
   .relatedGrid {

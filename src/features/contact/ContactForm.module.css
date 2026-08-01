@@ -68,4 +68,8 @@
   .row {
     grid-template-columns: 1fr;
   }
+
+  .form {
+    padding: 20px;
+  }
 }

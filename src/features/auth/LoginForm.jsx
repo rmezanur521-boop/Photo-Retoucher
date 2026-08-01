@@ -33,7 +33,7 @@ const LoginForm = () => {
     <form className={styles.form} onSubmit={handleSubmit}>
       <h1 className={styles.heading}>Welcome Back</h1>
       <p className={styles.subtext}>
-        Welcome back to us - Let&apos;s get back to your account.
+        Welcome back to us-Let&apos;s get back to your account.
       </p>
 
       <div className={styles.divider} />
@@ -94,10 +94,9 @@ const LoginForm = () => {
         type="submit"
         variant="primary"
         fullWidth
-        icon={<ArrowRight size={16} />}
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Signing in..." : "Sign Up"}
+        {isSubmitting ? "Signing in..." : "Sign In"}
       </Button>
 
       <div className={styles.orDivider}>
@@ -125,6 +124,13 @@ const LoginForm = () => {
       </p>
     </form>
   );
+  <OrganicShape
+  position="bottom-left"
+  width={170}
+  left={0}
+  bottom={0}
+  zIndex={0}
+/>
 };
 
 export default LoginForm;

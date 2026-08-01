@@ -9,7 +9,7 @@
 }
 
 .formCard {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary);
   border-radius: 20px;
   padding: 40px;
   display: flex;
@@ -20,6 +20,7 @@
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 24px;
 }
@@ -50,7 +51,7 @@
 }
 
 .illustrationCard {
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary);
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -66,9 +67,18 @@
 @media (max-width: 900px) {
   .wrapper {
     grid-template-columns: 1fr;
+    padding: 24px 20px 60px;
   }
 
   .illustrationCard {
     min-height: 320px;
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .formCard {
+    padding: 24px 20px;
+    border-radius: 16px;
   }
 }

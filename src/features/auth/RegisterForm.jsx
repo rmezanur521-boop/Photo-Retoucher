@@ -130,7 +130,6 @@ const RegisterForm = () => {
         type="submit"
         variant="primary"
         fullWidth
-        icon={<ArrowRight size={16} />}
         disabled={isSubmitting}
       >
         {isSubmitting ? "Creating account..." : "Sign Up"}
