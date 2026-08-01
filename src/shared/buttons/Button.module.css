@@ -45,3 +45,11 @@
   display: inline-flex;
   align-items: center;
 }
+.light {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.light:hover {
+  background-color: var(--color-bg-soft);
+}

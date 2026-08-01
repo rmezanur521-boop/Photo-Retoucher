@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  max-width: 620px;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.subtext {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  line-height: 1.6;
+}
