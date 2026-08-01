@@ -1,0 +1,71 @@
+.form {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.required {
+  color: #e11d48;
+  margin-left: 2px;
+}
+
+.field input,
+.field textarea {
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-light);
+  resize: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--color-white);
+}
+
+.successMessage {
+  font-size: 14px;
+  font-weight: 600;
+  color: #16a34a;
+  background-color: #ecfdf5;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

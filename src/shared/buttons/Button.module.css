@@ -53,3 +53,7 @@
 .light:hover {
   background-color: var(--color-bg-soft);
 }
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

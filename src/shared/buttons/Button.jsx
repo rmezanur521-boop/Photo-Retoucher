@@ -9,6 +9,7 @@ const Button = ({
   type = "button",
   icon = null,
   fullWidth = false,
+  disabled = false,
   className = "",
 }) => {
   const classes = `${styles.button} ${styles[variant]} ${
@@ -25,7 +26,12 @@ const Button = ({
   }
 
   return (
-    <button type={type} className={classes} onClick={onClick}>
+    <button
+      type={type}
+      className={classes}
+      onClick={onClick}
+      disabled={disabled}
+    >
       <span>{children}</span>
       {icon && <span className={styles.icon}>{icon}</span>}
     </button>
