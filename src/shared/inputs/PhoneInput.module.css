@@ -1,0 +1,79 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: visible;
+  position: relative;
+}
+
+.countrySelect {
+  position: relative;
+}
+
+.countryTrigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 10px 14px 14px;
+}
+
+.flagIcon {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.countryDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 100px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(15, 27, 76, 0.1);
+  padding: 6px;
+  z-index: 10;
+}
+
+.countryDropdown button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.countryDropdown button:hover {
+  background-color: var(--color-bg-soft);
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-border);
+}
+
+.dialCode {
+  padding: 0 8px 0 10px;
+  font-size: 14px;
+  color: var(--color-text-dark);
+  font-weight: 600;
+}
+
+.input {
+  flex: 1;
+  padding: 14px 14px 14px 8px;
+  border: none;
+  font-size: 14px;
+  color: var(--color-text-dark);
+  border-radius: 0 8px 8px 0;
+}
+
+.input:focus {
+  outline: none;
+}

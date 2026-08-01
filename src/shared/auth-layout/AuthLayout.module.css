@@ -1,0 +1,74 @@
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.formCard {
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logoTop {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.logoBottom {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  letter-spacing: 1px;
+}
+
+.illustrationCard {
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-bg-soft);
+}
+
+.illustrationCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .illustrationCard {
+    min-height: 320px;
+  }
+}
