@@ -7,7 +7,7 @@ const Register = () => {
       formContent={<RegisterForm />}
       illustrationContent={
         <img
-          src="/assets/images/auth-illustration.jpg"
+          src="/assets/images/auth-illustration-2.jpg"
           alt="Photo editing workflow"
         />
       }
