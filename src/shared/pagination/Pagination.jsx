@@ -1,27 +1,46 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "./Pagination.module.css";
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+  if (totalPages <= 1) {
+    return null;
+  }
+
   const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      onPageChange(currentPage - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      onPageChange(currentPage + 1);
+    }
+  };
 
   return (
     <div className={styles.pagination}>
       <button
         type="button"
         className={styles.navButton}
+        onClick={handlePrevious}
         disabled={currentPage === 1}
-        onClick={() => onPageChange(currentPage - 1)}
       >
-        <ArrowLeft size={14} /> Preview
+        <ChevronLeft size={16} />
+        Preview
       </button>
 
       {pages.map((page) => (
         <button
           key={page}
           type="button"
-          className={`${styles.pageButton} ${
-            page === currentPage ? styles.pageButtonActive : ""
-          }`}
+          className={
+            page === currentPage
+              ? `${styles.pageButton} ${styles.pageButtonActive}`
+              : styles.pageButton
+          }
           onClick={() => onPageChange(page)}
         >
           {page}
@@ -31,10 +50,11 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       <button
         type="button"
         className={styles.navButton}
+        onClick={handleNext}
         disabled={currentPage === totalPages}
-        onClick={() => onPageChange(currentPage + 1)}
       >
-        Next <ArrowRight size={14} />
+        Next
+        <ChevronRight size={16} />
       </button>
     </div>
   );

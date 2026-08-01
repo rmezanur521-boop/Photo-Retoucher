@@ -1,10 +1,10 @@
 .pagination {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin-top: 48px;
+  flex-wrap: wrap;
 }
 
 .navButton {
@@ -14,33 +14,42 @@
   padding: 10px 16px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
+  background-color: var(--color-white);
   font-size: 14px;
   font-weight: 600;
   color: var(--color-text-dark);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: var(--color-bg-soft);
 }
 
 .navButton:disabled {
-  opacity: 0.4;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-.navButton:not(:disabled):hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-}
-
 .pageButton {
-  width: 40px;
+  min-width: 40px;
   height: 40px;
+  padding: 0 12px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
+  background-color: var(--color-white);
   font-size: 14px;
   font-weight: 600;
   color: var(--color-text-dark);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.pageButtonActive {
+.pageButton:hover {
+  background-color: var(--color-bg-soft);
+}
+
+.pageButtonActive,
+.pageButtonActive:hover {
   background-color: var(--color-primary);
-  color: var(--color-white);
   border-color: var(--color-primary);
+  color: var(--color-white);
 }

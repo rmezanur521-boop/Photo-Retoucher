@@ -7,7 +7,7 @@ const BlogCard = ({ id, title, author, date, category, readTime }) => {
     <article className={styles.card}>
       <Link to={`/blog/${id}`} className={styles.imageWrapper}>
         <img
-          src={`/assets/images/blog/${id}.jpg`}
+          src={`/assets/images/blog/${id}.png`}
           alt={title}
           className={styles.image}
         />
@@ -23,15 +23,18 @@ const BlogCard = ({ id, title, author, date, category, readTime }) => {
         </h3>
 
         <div className={styles.footer}>
-          <span className={styles.category}>{category.toUpperCase()}</span>
-          <span className={styles.readTime}>
-            <Clock size={13} /> {readTime}
-          </span>
-        </div>
+          <div className={styles.footerLeft}>
+            <span className={styles.category}>{category.toUpperCase()}</span>
+            <span className={styles.divider} />
+            <span className={styles.readTime}>
+              <Clock size={13} /> {readTime}
+            </span>
+          </div>
 
-        <Link to={`/blog/${id}`} className={styles.learnMore}>
-          Learn more <ArrowRight size={14} />
-        </Link>
+          <Link to={`/blog/${id}`} className={styles.learnMore}>
+            Learn more <ArrowRight size={14} />
+          </Link>
+        </div>
       </div>
     </article>
   );

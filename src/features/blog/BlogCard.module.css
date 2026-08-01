@@ -48,10 +48,33 @@
 .footer {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-top: 4px;
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 12px;
   font-weight: 700;
   color: var(--color-primary);
+  min-width: 0;
+}
+
+.category {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.divider {
+  width: 1px;
+  height: 12px;
+  background-color: var(--color-border);
+  flex-shrink: 0;
 }
 
 .readTime {
@@ -60,14 +83,16 @@
   gap: 4px;
   color: var(--color-text-muted);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .learnMore {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 4px;
   font-size: 13px;
   font-weight: 600;
   color: var(--color-primary);
-  margin-top: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }

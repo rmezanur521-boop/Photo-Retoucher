@@ -6,7 +6,7 @@ import Pagination from "@/shared/pagination/Pagination";
 import { BLOG_CATEGORIES, BLOG_POSTS } from "@/constants/blogData";
 import styles from "./Blogs.module.css";
 
-const POSTS_PER_PAGE = 12;
+const POSTS_PER_PAGE = 9;
 
 const Blogs = () => {
   const [activeCategory, setActiveCategory] = useState("All");
