@@ -1,0 +1,160 @@
+.header {
+  background-color: var(--color-bg-light);
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.headerContainer {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.3;
+}
+
+.subtext {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.content {
+  padding: 60px 24px;
+  background-color: var(--color-white);
+}
+
+.contentContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.75fr 2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 100px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebarTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.tocList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tocList li {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.shareButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.coverImage {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.diagramImage {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: var(--color-bg-soft);
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.relatedSection {
+  padding: 60px 24px 80px;
+  background-color: var(--color-bg-light);
+}
+
+.relatedContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.relatedTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 24px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .contentContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+}
