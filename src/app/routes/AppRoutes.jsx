@@ -9,7 +9,6 @@ import About from "@/app/pages/About";
 import Contact from "@/app/pages/Contact";
 import Login from "@/app/pages/Login";
 import Register from "@/app/pages/Register";
-import DataForm from "@/app/pages/DataForm";
 import Portfolio from "@/app/pages/Portfolio";
 import HowItWorks from "@/app/pages/HowItWorks";
 import Pricing from "@/app/pages/Pricing";
@@ -25,7 +24,6 @@ const AppRoutes = () => {
       children: [
         { path: ROUTES.LOGIN, element: <Login /> },
         { path: ROUTES.REGISTER, element: <Register /> },
-        { path: "register/details", element: <DataForm /> },
       ],
     },
     {

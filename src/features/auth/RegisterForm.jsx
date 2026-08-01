@@ -39,7 +39,7 @@ const RegisterForm = () => {
     setIsSubmitting(false);
 
     if (response.success) {
-      navigate(ROUTES.DATA_FORM);
+      navigate(ROUTES.LOGIN);
     }
   };
 

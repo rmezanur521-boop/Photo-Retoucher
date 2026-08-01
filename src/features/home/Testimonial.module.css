@@ -1,0 +1,166 @@
+.section {
+  padding: 0 24px 80px;
+  background-color: var(--color-white);
+}
+
+.banner {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  border-radius: 20px;
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.bannerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.bannerText {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.cardsWrapper {
+  max-width: 1280px;
+  margin: -60px auto 0;
+  padding: 0 24px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(15, 27, 76, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.companyName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.website {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.reviewText {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.reviewerRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewerName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.reviewerTitle {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.dotActive {
+  width: 28px;
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardsWrapper {
+    margin-top: 24px;
+  }
+
+  .banner {
+    padding: 32px 24px;
+  }
+}

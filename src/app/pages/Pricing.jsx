@@ -5,7 +5,7 @@ import FilterTabs from "@/shared/filter-tabs/FilterTabs";
 import ServiceCard from "@/shared/cards/ServiceCard";
 import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
-//import { SERVICE_CATEGORIES, SERVICES_LIST } from "@/constants/services";
+import { SERVICE_CATEGORIES, SERVICES_LIST } from "@/constants/services";
 import headerStyles from "@/shared/page-header/PageHeader.module.css";
 import styles from "./Pricing.module.css";
 
