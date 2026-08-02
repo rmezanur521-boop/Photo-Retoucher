@@ -1,0 +1,341 @@
+.howItWorks {
+  padding: 80px 24px;
+  background-color: var(--color-bg-light);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.heading {
+  margin: 12px 0 0;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.heading span {
+  color: var(--color-primary);
+}
+
+.subtext {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 420px;
+}
+
+.steps {
+  margin-top: 40px;
+}
+
+.stepRow {
+  display: flex;
+  gap: 24px;
+}
+
+.stepNumberCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.stepNumber {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.stepConnector {
+  flex: 1;
+  width: 1px;
+  min-height: 40px;
+  border-left: 2px dashed var(--color-primary);
+  margin: 6px 0;
+}
+
+.stepBody {
+  position: relative;
+  flex: 1;
+  padding-bottom: 32px;
+}
+
+.stepIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepIcon img {
+  width: 24px;
+  height: 24px;
+}
+
+.stepTitle {
+  margin: 16px 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.stepText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 420px;
+}
+
+.stepDivider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+}
+
+.visualWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  height: 700px;
+}
+
+.connectorLines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.card {
+  position: absolute;
+  background: var(--color-white);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(24, 42, 82, 0.08);
+}
+
+.uploadCard {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 190px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.browserDots {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  gap: 6px;
+}
+
+.browserDots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.3;
+}
+
+.browserDots span:first-child {
+  opacity: 1;
+}
+
+.uploadIcon img {
+  width: 40px;
+  height: 40px;
+}
+
+.uploadLine {
+  width: 80px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-primary);
+}
+
+.editCard {
+  top: 260px;
+  left: 40px;
+  width: 300px;
+  height: 190px;
+  display: flex;
+  overflow: hidden;
+}
+
+.editImageBefore,
+.editImageAfter {
+  flex: 1;
+  position: relative;
+}
+
+.editImageBefore img,
+.editImageAfter img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.editHandle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editHandle img {
+  width: 14px;
+  height: 14px;
+}
+
+.completedCard {
+  top: 480px;
+  left: 90px;
+  width: 300px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.completedIcon img {
+  width: 64px;
+  height: 64px;
+}
+
+.completedLine {
+  width: 100px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-primary);
+}
+
+.completedText {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.badge {
+  position: absolute;
+  background: var(--color-bg-light);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 220px;
+}
+
+.badge strong {
+  font-size: 15px;
+  color: var(--color-text-dark);
+}
+
+.badge span {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.uploadBadge {
+  top: 30px;
+  right: 0;
+}
+
+.editBadge {
+  top: 300px;
+  left: 0;
+}
+
+.completedBadge {
+  bottom: 20px;
+  right: 0;
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .steps {
+    text-align: left;
+  }
+
+  .right {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .howItWorks {
+    padding: 50px 20px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .visualWrapper {
+    height: 620px;
+  }
+
+  .uploadCard,
+  .editCard,
+  .completedCard {
+    width: 240px;
+  }
+
+  .badge {
+    max-width: 180px;
+  }
+}
