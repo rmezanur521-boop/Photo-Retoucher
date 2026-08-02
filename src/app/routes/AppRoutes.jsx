@@ -13,7 +13,7 @@ import Portfolio from "@/app/pages/Portfolio";
 import HowItWorks from "@/app/pages/HowItWorks";
 import Pricing from "@/app/pages/Pricing";
 import Blogs from "@/app/pages/Blogs";
-//import BlogDetails from "@/app/pages/BlogDetails";
+import BlogDetails from "@/app/pages/BlogDetails";
 import ServiceDetails from "@/app/pages/ServiceDetails";
 import Privacy from "@/app/pages/Privacy";
 
@@ -37,7 +37,7 @@ const AppRoutes = () => {
         { path: "how-it-works", element: <HowItWorks /> },
         { path: "pricing", element: <Pricing /> },
         { path: "blog", element: <Blogs /> },
-        //{ path: "blog/:blogId", element: <BlogDetails /> },
+        { path: "blog/:blogId", element: <BlogDetails /> },
         { path: "services/:serviceId", element: <ServiceDetails /> },
         { path: "privacy-policy", element: <Privacy /> },
       ],

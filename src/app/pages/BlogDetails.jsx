@@ -1,12 +1,10 @@
 import { useParams } from "react-router-dom";
-import { Share2 } from "lucide-react";
 import {
   BLOG_POSTS,
   BLOG_TABLE_OF_CONTENTS,
   BLOG_TAGS,
 } from "@/constants/blogData";
 import BlogCard from "@/features/blog/BlogCard";
-import QualityWorkflowDiagram from "@/features/blog/QualityWorkflowDiagram";
 import styles from "./BlogDetails.module.css";
 
 const BlogDetails = () => {
@@ -46,7 +44,12 @@ const BlogDetails = () => {
             </ul>
 
             <button type="button" className={styles.shareButton}>
-              <Share2 size={16} /> Share This Article
+              <img
+                src="/assets/icons/share.svg"
+                alt=""
+                className={styles.shareIcon}
+              />
+              Share This Article
             </button>
           </aside>
 
@@ -70,7 +73,13 @@ const BlogDetails = () => {
               delivery. If the answer is vague, that tells you a lot.
             </p>
 
-            <QualityWorkflowDiagram />
+            <div className={styles.workflowSection}>
+              <img
+                src={`/assets/images/blog/${post.id}-workflow.jpg`}
+                alt="Path Photo Retouching Quality Control Workflow"
+                className={styles.workflowImage}
+              />
+            </div>
 
             <p>{processExplanationText}</p>
             <p>{processExplanationText}</p>
