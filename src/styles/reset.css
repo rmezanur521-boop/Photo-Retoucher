@@ -1,16 +1,18 @@
 :root {
-  --color-primary: #0041FF;
-  --color-primary-dark: #21409A;
+  --color-primary: #0041ff;
+  --color-primary-dark: #21409a;
   --color-secondary: #0f1b4c;
   --color-accent: #fdbb2d;
-  --color-text-dark: #1a1a2e;
-  --color-text-muted: #6b7280;
-  --color-bg-light: #f4f6fb;
+  --color-text-dark: #1b263b;
+  --color-text-muted: #4c515b;
+  --color-bg-light: #f3f6fd;
   --color-bg-soft: #eaf0ff;
+  --color-shape: #e3eafe;
   --color-white: #ffffff;
-  --color-border: #f3f6fd;
-  
+  --color-border: #e2e8f0;
+  --color-border-calculator: #b3b3b3;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -21,8 +23,8 @@ html,
 body {
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
-  color: #1a1a2e;
-  background-color: #ffffff;
+  color: var(--color-text-dark);
+  background-color: var(--color-white);
 }
 
 a {

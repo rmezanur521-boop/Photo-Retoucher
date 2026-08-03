@@ -46,37 +46,20 @@
 .thumbnailRow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 20px;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
+  text-align: left;
 }
 
-.thumbnailCard {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.thumbnailCard img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid var(--color-border);
-}
-
-.thumbnailCard span {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--color-text-dark);
+@media (max-width: 768px) {
+  .thumbnailRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 576px) {
   .heading {
     font-size: 26px;
-  }
-
-  .thumbnailRow {
-    grid-template-columns: repeat(2, 1fr);
   }
 }

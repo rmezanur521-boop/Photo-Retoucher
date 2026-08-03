@@ -2,13 +2,30 @@ import { ArrowRight, PlayCircle } from "lucide-react";
 import { ROUTES } from "@/constants/routes";
 import Button from "@/shared/buttons/Button";
 import OrganicShape from "@/shared/decorations/OrganicShape";
+import ServiceHighlightCard from "@/features/our-services/ServiceHighlightCard";
 import styles from "./OurServicesHero.module.css";
 
 const HERO_THUMBNAILS = [
-  { id: "product-photo", label: "Product Photo" },
-  { id: "background-removal", label: "Background Removal" },
-  { id: "ecommerce-photo-editing", label: "Ecommerce Photo" },
-  { id: "image-masking", label: "Image Masking" },
+  {
+    id: "clipping-path",
+    label: "Product Photo",
+    description: "Clean cutouts for any background",
+  },
+  {
+    id: "background-removal",
+    label: "Background Removal",
+    description: "Clean cutouts for any background",
+  },
+  {
+    id: "jewelry-retouching",
+    label: "Ecommerce Photo",
+    description: "Clean cutouts for any background",
+  },
+  {
+    id: "image-masking",
+    label: "Image Masking",
+    description: "Clean cutouts for any background",
+  },
 ];
 
 const OurServicesHero = () => {
@@ -48,13 +65,13 @@ const OurServicesHero = () => {
 
         <div className={styles.thumbnailRow}>
           {HERO_THUMBNAILS.map((thumb) => (
-            <div key={thumb.id} className={styles.thumbnailCard}>
-              <img
-                src={`/assets/images/services/${thumb.id}-after.jpg`}
-                alt={thumb.label}
-              />
-              <span>{thumb.label}</span>
-            </div>
+            <ServiceHighlightCard
+              key={thumb.id}
+              title={thumb.label}
+              description={thumb.description}
+              beforeImage={`/assets/images/services/${thumb.id}-before.jpg`}
+              afterImage={`/assets/images/services/${thumb.id}-after.jpg`}
+            />
           ))}
         </div>
       </div>

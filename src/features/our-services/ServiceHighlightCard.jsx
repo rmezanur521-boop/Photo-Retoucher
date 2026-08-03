@@ -4,7 +4,7 @@ import styles from "./ServiceHighlightCard.module.css";
 const ServiceHighlightCard = ({ title, description, beforeImage, afterImage }) => {
   return (
     <div className={styles.card}>
-      <BeforeAfterCard beforeImage={beforeImage} afterImage={afterImage} />
+      <BeforeAfterCard variant="plain" beforeImage={beforeImage} afterImage={afterImage} />
 
       <div className={styles.caption}>
         <h3 className={styles.title}>{title}</h3>
