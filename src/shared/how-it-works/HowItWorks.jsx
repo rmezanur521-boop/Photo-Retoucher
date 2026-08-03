@@ -104,13 +104,13 @@ const HowItWorks = () => {
             <div className={`${styles.card} ${styles.editCard}`}>
               <div className={styles.editImageBefore}>
                 <img
-                  src="/assets/images/how-it-works/edit-before.jpg"
+                  src="/assets/images/services/clipping-path-before.jpg"
                   alt="Before"
                 />
               </div>
               <div className={styles.editImageAfter}>
                 <img
-                  src="/assets/images/how-it-works/edit-after.jpg"
+                  src="/assets/images/services/clipping-path-after.jpg"
                   alt="After"
                 />
               </div>

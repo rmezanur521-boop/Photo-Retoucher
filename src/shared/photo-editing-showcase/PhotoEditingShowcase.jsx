@@ -5,18 +5,18 @@ import styles from "./PhotoEditingShowcase.module.css";
 const THUMBNAILS = [
   {
     id: "toy",
-    beforeImage: "/assets/images/services/thumb-toy-before.jpg",
-    afterImage: "/assets/images/services/thumb-toy-after.jpg",
+     beforeImage: "/assets/images/services/background-removal-before.jpg",
+    afterImage: "/assets/images/services/background-removal-after.jpg",
   },
   {
     id: "lighting",
-    beforeImage: "/assets/images/services/clipping-path-befor.jpg",
+     beforeImage: "/assets/images/services/clipping-path-before.jpg",
     afterImage: "/assets/images/services/clipping-path-after.jpg",
   },
   {
     id: "onesie",
-    beforeImage: "/assets/images/services/thumb-onesie-before.jpg",
-    afterImage: "/assets/images/services/thumb-onesie-after.jpg",
+    beforeImage: "/assets/images/services/ghost-mannequin-before.jpg",
+    afterImage: "/assets/images/services/ghost-mannequin-after.jpg",
   },
   {
     id: "model",
@@ -39,8 +39,10 @@ const PhotoEditingShowcase = () => {
 
         <div className={styles.demo}>
           <BeforeAfterCard
-            beforeImage="/assets/images/services/demo-bag-before.jpg"
-            afterImage="/assets/images/services/demo-bag-after.jpg"
+            variant="plain"
+            beforeImage="/assets/images/hero-before.jpg"
+            afterImage="/assets/images/hero-after.jpg"
+            afterLabel="Before"
           />
 
           <div className={styles.demoCaption}>
@@ -52,18 +54,12 @@ const PhotoEditingShowcase = () => {
 
           <div className={styles.thumbGrid}>
             {THUMBNAILS.map((thumb) => (
-              <div key={thumb.id} className={styles.thumbCard}>
-                <div className={styles.thumbSide}>
-                  <span className={styles.thumbBadge}>Before</span>
-                  <img src={thumb.beforeImage} alt="Before" />
-                </div>
-                <div className={styles.thumbSide}>
-                  <span className={`${styles.thumbBadge} ${styles.thumbBadgeAfter}`}>
-                    After
-                  </span>
-                  <img src={thumb.afterImage} alt="After" />
-                </div>
-              </div>
+              <BeforeAfterCard
+                key={thumb.id}
+                variant="thumb"
+                beforeImage={thumb.beforeImage}
+                afterImage={thumb.afterImage}
+              />
             ))}
           </div>
         </div>

@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
             ))}
             <li>
-              <Link to={ROUTES.HOME} className={styles.viewAllLink}>
+              <Link to={ROUTES.OUR_SERVICES} className={styles.viewAllLink}>
                 View all services →
               </Link>
             </li>

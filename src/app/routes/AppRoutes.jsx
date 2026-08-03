@@ -11,6 +11,7 @@ import Login from "@/app/pages/Login";
 import Register from "@/app/pages/Register";
 import Portfolio from "@/app/pages/Portfolio";
 import HowItWorks from "@/app/pages/HowItWorks";
+import OurServices from "@/app/pages/OurServices";
 import Pricing from "@/app/pages/Pricing";
 import Blogs from "@/app/pages/Blogs";
 import BlogDetails from "@/app/pages/BlogDetails";
@@ -35,6 +36,7 @@ const AppRoutes = () => {
         { path: "contact", element: <Contact /> },
         { path: "portfolio", element: <Portfolio /> },
         { path: "how-it-works", element: <HowItWorks /> },
+        { path: "our-services", element: <OurServices /> },
         { path: "pricing", element: <Pricing /> },
         { path: "blog", element: <Blogs /> },
         { path: "blog/:blogId", element: <BlogDetails /> },

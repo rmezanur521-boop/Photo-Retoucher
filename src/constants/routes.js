@@ -6,6 +6,7 @@ export const ROUTES = {
   REGISTER: "/register",
   PORTFOLIO: "/portfolio",
   HOW_IT_WORKS: "/how-it-works",
+  OUR_SERVICES: "/our-services",
   PRICING: "/pricing",
   BLOGS: "/blog",
   BLOG_DETAILS: "/blog/:blogId",

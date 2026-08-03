@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption {
+  margin-top: 16px;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.description {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}

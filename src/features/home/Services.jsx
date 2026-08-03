@@ -29,7 +29,7 @@ const Services = () => {
 
           <div className={styles.viewAllWrapper}>
             <Button
-              to={ROUTES.PRICING}
+              to={ROUTES.OUR_SERVICES}
               variant="primary"
               icon={<ArrowRight size={16} />}
             >
