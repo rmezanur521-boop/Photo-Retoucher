@@ -88,6 +88,7 @@ const Hero = () => {
     <div className={styles.heroWrapper}>
        <OrganicShape
         position="bottom-left"
+        width={260}
         color="#e3eafe"
         zIndex={0}
         flipY

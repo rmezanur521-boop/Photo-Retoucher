@@ -14,7 +14,7 @@ const Faq = () => {
 
   return (
     <section className={styles.faq}>
-      <OrganicShape position="bottom-left" width={260} color="#e3eafe" zIndex={0} flipY />
+      <OrganicShape position="bottom-left" width={220} color="#e3eafe" zIndex={0} flipY />
 
       <div className={styles.container}>
         <div className={styles.info}>

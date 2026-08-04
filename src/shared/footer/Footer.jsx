@@ -118,7 +118,7 @@ const Footer = () => {
           </ul>
 
           <div className={styles.securityBadge}>
-            <ShieldCheck size={20} />
+            <img src="/assets/icons/security.svg" alt="" />
             <div>
               <p className={styles.securityTitle}>100% Security Guaranteed</p>
               <p className={styles.securitySubtitle}>

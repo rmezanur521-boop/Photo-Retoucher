@@ -13,18 +13,18 @@ const StudioIntro = () => {
       <div className={styles.container}>
         <div className={styles.visual}>
           <span className={styles.dashedLine} aria-hidden="true">
-            <svg width="30" height="440" viewBox="0 0 30 440" fill="none">
+            <svg width="40" height="460" viewBox="0 0 40 460" fill="none">
               <path
-                d="M28 2C20 8 12 14 10 22"
+                d="M36 4C24 12 14 20 12 34"
                 stroke="var(--color-primary)"
                 strokeWidth="2"
                 strokeLinecap="round"
               />
               <line
-                x1="10"
-                y1="30"
-                x2="10"
-                y2="420"
+                x1="12"
+                y1="42"
+                x2="12"
+                y2="440"
                 stroke="var(--color-primary)"
                 strokeWidth="2"
                 strokeDasharray="6 8"

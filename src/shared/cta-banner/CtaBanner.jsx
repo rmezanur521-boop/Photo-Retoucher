@@ -10,10 +10,11 @@ const CtaBanner = () => {
 
       <div className={styles.container}>
         <div className={styles.left}>
-          <span className={styles.tagline}>
-            Your best work. Our Editing.
-            <span className={styles.taglineUnderline} />
-          </span>
+          <img
+            src="/assets/icons/your-best-work.svg"
+            alt="Your best work. Our Editing."
+            className={styles.tagline}
+          />
           <h2 className={styles.heading}>
             Ready to save time and scale your business?
           </h2>
