@@ -4,8 +4,8 @@ import styles from "./PageHeader.module.css";
 const PageHeader = ({ eyebrow, title, subtext }) => {
   return (
     <section className={styles.header}>
-      <OrganicShape position="bottom-left" />
-      <OrganicShape position="top-right" />
+      
+      <OrganicShape position="bottom-left" width={120} color="#e3eafe" zIndex={0} flipY />
 
       <div className={styles.container}>
         {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}

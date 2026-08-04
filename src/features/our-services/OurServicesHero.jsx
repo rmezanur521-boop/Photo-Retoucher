@@ -1,4 +1,4 @@
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import { ROUTES } from "@/constants/routes";
 import Button from "@/shared/buttons/Button";
 import OrganicShape from "@/shared/decorations/OrganicShape";
@@ -31,7 +31,8 @@ const HERO_THUMBNAILS = [
 const OurServicesHero = () => {
   return (
     <section className={styles.hero}>
-      <OrganicShape position="top-right" />
+
+      <OrganicShape position="bottom-left" width={200} color="#e3eafe" zIndex={0} flipY />
 
       <div className={styles.container}>
         <h1 className={styles.heading}>
@@ -57,7 +58,7 @@ const OurServicesHero = () => {
           <Button
             to={ROUTES.HOW_IT_WORKS}
             variant="outline"
-            icon={<PlayCircle size={16} />}
+            icon={<ArrowRight size={16} />}
           >
             How it works
           </Button>

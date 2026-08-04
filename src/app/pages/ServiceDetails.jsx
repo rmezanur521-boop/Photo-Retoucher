@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import { SERVICES_LIST } from "@/constants/services";
 import { ROUTES } from "@/constants/routes";
 import Button from "@/shared/buttons/Button";
@@ -24,7 +24,8 @@ const ServiceDetails = () => {
   return (
     <main>
       <section className={styles.hero}>
-        <OrganicShape position="bottom-left" />
+        
+      <OrganicShape position="bottom-left" width={160} color="#e3eafe" zIndex={0} flipY />
 
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
@@ -43,7 +44,7 @@ const ServiceDetails = () => {
               <Button
                 to={ROUTES.HOW_IT_WORKS}
                 variant="outline"
-                icon={<PlayCircle size={16} />}
+                icon={<ArrowRight size={16} />}
               >
                 How it works
               </Button>

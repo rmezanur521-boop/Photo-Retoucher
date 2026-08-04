@@ -3,45 +3,38 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 22px;
-  border-radius: 5px;
+  padding: 14px 24px;
+  border-radius: 10px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
   transition: all 0.2s ease;
 }
-
 .primary {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
-
 .primary:hover {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
 }
-
 .outline {
   background-color: transparent;
   color: var(--color-primary);
   border: 1.5px solid var(--color-primary);
 }
-
 .outline:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
-
 .text {
   background-color: transparent;
   color: var(--color-white);
   padding: 0;
 }
-
 .fullWidth {
   width: 100%;
 }
-
 .icon {
   display: inline-flex;
   align-items: center;
@@ -50,7 +43,6 @@
   background-color: var(--color-white);
   color: var(--color-primary);
 }
-
 .light:hover {
   background-color: var(--color-bg-soft);
 }

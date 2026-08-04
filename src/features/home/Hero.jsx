@@ -1,17 +1,38 @@
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import { ROUTES } from "@/constants/routes";
 import Button from "@/shared/buttons/Button";
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
 import OrganicShape from "@/shared/decorations/OrganicShape";
-import HeroStats from "./HeroStats";
 import styles from "./Hero.module.css";
+
+const STATS = [
+  {
+    icon: "/assets/icons/image-icon.png",
+    value: "50,000+",
+    label: "Image Edited Daily",
+  },
+  {
+    icon: "/assets/icons/users-icon.png",
+    value: "42,000+",
+    label: "Happy Clients",
+  },
+  {
+    icon: "/assets/icons/satisfaction-icon.png",
+    value: "98%",
+    label: "Client Satisfaction",
+  },
+  {
+    icon: "/assets/icons/turnaround-icon.png",
+    value: "6-24h",
+    label: "Average Turnaround",
+  },
+];
 
 const Hero = () => {
   return (
-    <>
+    <div className={styles.heroWrapper}>
       <section className={styles.hero}>
-        <OrganicShape position="bottom-left" className={styles.heroShapeLeft} />
-        <OrganicShape position="top-right" className={styles.heroShapeRight} />
+      <OrganicShape position="bottom-left" width={260} color="#e3eafe" zIndex={0} flipY />
 
         <div className={styles.container}>
           <div className={styles.content}>
@@ -39,7 +60,7 @@ const Hero = () => {
               <Button
                 to={ROUTES.HOW_IT_WORKS}
                 variant="outline"
-                icon={<PlayCircle size={16} />}
+                icon={<ArrowRight size={16} />}
               >
                 How it works
               </Button>
@@ -67,8 +88,23 @@ const Hero = () => {
         </div>
       </section>
 
-      <HeroStats />
-    </>
+      <div className={styles.statsBar}>
+        <div className={styles.statsContainer}>
+          {STATS.map(({ icon, value, label }, i) => (
+            <div className={styles.stat} key={i}>
+              <div className={styles.iconCircle}>
+                <img src={icon} alt={label} className={styles.statIcon} />
+              </div>
+              <div className={styles.statText}>
+                <span className={styles.statValue}>{value}</span>
+                <span className={styles.statLabel}>{label}</span>
+              </div>
+              {i < STATS.length - 1 && <div className={styles.divider} />}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
