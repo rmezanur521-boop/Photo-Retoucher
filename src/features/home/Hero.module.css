@@ -1,13 +1,11 @@
-/* Hero + Stats Wrapper */
 .heroWrapper {
   position: relative;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   overflow: hidden;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
   padding: 60px 24px;
 }
 
@@ -30,25 +28,42 @@
 
 .badge {
   display: inline-flex;
+  align-items: center;
+  gap: 6px;
   align-self: flex-start;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 400;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--color-primary);
-  background-color: var(--color-bg-soft);
-  padding: 6px 14px;
-  border-radius: 20px;
+  background-color: var(--color-shape);
+  padding: 8px 10px;
+  border-radius: 47px;
+}
+.badgeIcon {
+  width: 14px;
+  height: 14px;
 }
 
 .heading {
   font-size: 44px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.4;
   color: var(--color-text-dark);
 }
 
 .highlight {
+  position: relative;
+  display: inline-block;
+  color: var(--color-primary);
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  width: 100%;
+  height: 20px;
   color: var(--color-primary);
 }
 
@@ -67,7 +82,7 @@
 .trust {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   margin-top: 8px;
 }
 
@@ -76,12 +91,12 @@
 }
 
 .avatarStack img {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
   object-fit: cover;
-  margin-left: -10px;
+  margin-left: -16px;
 }
 
 .avatarStack img:first-child {
@@ -97,10 +112,38 @@
 .visual {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   width: 100%;
-  max-width: 420px;
+  max-width: 540px;
   margin-left: auto;
+}
+
+.visualCard {
+  width: 100%;
+  cursor: pointer;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 24px;
+  height: 6px;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--color-border);
+  cursor: pointer;
+  transition: background-color 0.2s ease, width 0.2s ease;
+}
+
+.dotActive {
+  width: 32px;
+  background-color: var(--color-primary);
 }
 
 .heroShapeLeft {
@@ -124,7 +167,7 @@
 
   .visual {
     order: -1;
-    max-width: 360px;
+    max-width: 420px;
     margin: 0 auto;
   }
 }
@@ -140,12 +183,11 @@
   }
 }
 
-/* Hero Stats Section */
 .statsBar {
   background-color: #011045;
   max-width: 1285px;
   width: calc(100% - 160px);
-  height: 218px;
+  min-height: 240px;
   margin: -40px auto 60px;
   border-radius: 16px;
   position: relative;
@@ -159,16 +201,16 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  padding: 0 48px;
+  padding: 0 56px;
 }
 
 .stat {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 20px;
   position: relative;
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .divider {
@@ -177,13 +219,13 @@
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
-  height: 56px;
+  height: 64px;
   background: rgba(255, 255, 255, 0.15);
 }
 
 .iconCircle {
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -192,8 +234,8 @@
 }
 
 .statIcon {
-  width: 26px;
-  height: 26px;
+  width: 32px;
+  height: 32px;
 }
 
 .statText {
@@ -202,14 +244,14 @@
 }
 
 .statValue {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--color-white);
   line-height: 1.2;
 }
 
 .statLabel {
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
 }
 

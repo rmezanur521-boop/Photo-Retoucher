@@ -110,7 +110,7 @@ const StudioIntro = () => {
             <ul className={styles.pricingChecklist}>
               {STUDIO_PRICING.checklist.map((item) => (
                 <li key={item}>
-                  <img src="/assets/icons/check-circle.svg" alt="" />
+                  <img src="/assets/icons/check-circles.svg" alt="" />
                   {item}
                 </li>
               ))}
