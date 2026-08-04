@@ -2,7 +2,11 @@ export const SERVICE_CATEGORIES = [
   "All",
   "Product Photo",
   "Photo Retouching",
+  "Real Estate",
   "Jewellery Photo",
+  "Photo Restoration",
+  "Motion & Video",
+  "Digital Marketing",
 ];
 export const SERVICES_LIST = [
   {

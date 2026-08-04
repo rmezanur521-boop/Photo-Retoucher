@@ -1,6 +1,6 @@
 .section {
   padding: 80px 24px;
-  background-color: var(--color-bg-soft);
+  background-color: var(--color-bg-light);
   position: relative;
   overflow: hidden;
 }
@@ -25,27 +25,31 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
 }
 
 .featuredImage {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
   margin-bottom: 16px;
 }
 
 .featuredTitle {
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   color: var(--color-text-dark);
+  text-align: center;
 }
 
 .featuredDescription {
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 400;
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 121%;
+  text-align: center;
 }
 
 .itemsColumn {
@@ -74,16 +78,16 @@
 }
 
 .itemTitle {
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   color: var(--color-text-dark);
   margin-bottom: 4px;
 }
 
 .itemDescription {
-  font-size: 13px;
+  font-size: 20px;
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: 142%;
 }
 
 .ctaWrapper {

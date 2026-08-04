@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   padding: 60px 100px 80px;
-  background-color: var(--color-bg-soft);
+  background-color: var(--color-bg-light);
 }
 
 .container {

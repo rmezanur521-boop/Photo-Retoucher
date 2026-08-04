@@ -1,6 +1,6 @@
 .section {
   padding: 0 24px 80px;
-  background-color: var(--color-bg-soft);
+  background-color: var(--color-bg-light);
   position: relative;
   overflow: hidden;
 }
@@ -8,7 +8,7 @@
 .banner {
   max-width: 1280px;
   margin: 0 auto;
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  background: linear-gradient(135deg, #23178B, #205CD4);
   border-radius: 20px;
   padding: 80px;
   display: flex;
@@ -55,7 +55,17 @@
   z-index: 1;
 }
 
+.track {
+  overflow: hidden;
+}
+
+.trackInner {
+  display: flex;
+  transition: transform 2s ease;
+}
+
 .cardsGrid {
+  flex: 0 0 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
