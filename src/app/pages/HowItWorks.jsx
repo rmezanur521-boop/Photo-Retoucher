@@ -1,6 +1,7 @@
 import HowItWorksHero from "@/features/how-it-works/HowItWorksHero";
 import StepList from "@/features/how-it-works/StepList";
 import PerfectForEveryone from "@/shared/perfect-for-everyone/PerfectForEveryone";
+import ServicesCarousel from "@/features/our-services/ServicesCarousel";
 import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
 
@@ -10,6 +11,7 @@ const HowItWorks = () => {
       <HowItWorksHero />
       <StepList />
       <PerfectForEveryone />
+      <ServicesCarousel />
       <PricingCalculator />
       <Faq />
     </main>

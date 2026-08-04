@@ -1,6 +1,8 @@
 .footer {
   background-color: var(--color-bg-light);
   padding-top: 60px;
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
@@ -10,7 +12,11 @@
   display: grid;
   grid-template-columns: 1.7fr 1fr 1fr 1fr 1.3fr;
   gap: 40px;
+  position: relative;
+  z-index: 1;
 }
+
+
 
 /* ---------- Left section: Logo, description, socials ---------- */
 .brandColumn {
@@ -217,7 +223,6 @@
 }
 
 
-/* ---------- Bottom bar ---------- */
 .bottomBar {
   border-top: 1px solid #404040;
   max-width: 1280px;
@@ -228,7 +233,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+  position: relative;
+  z-index: 1;
 }
+
 
 .bottomBar p {
   font-size: 14px;
@@ -264,6 +272,11 @@
 .bottomLinks a:hover {
   color: var(--color-primary);
 }
+.cornerShape {
+  z-index: 0;
+}
+
+
 
 /* ---------- Responsive ---------- */
 @media (max-width: 992px) {
@@ -300,5 +313,8 @@
   .bottomBar {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .cornerShape {
+    width: 90px !important;
   }
 }

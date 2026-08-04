@@ -189,7 +189,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: var(--color-bg-soft);
+  background-color: #DCDCFF;
   border: 1px solid var(--color-border);
   border-radius: 14px;
   padding: 20px 24px;

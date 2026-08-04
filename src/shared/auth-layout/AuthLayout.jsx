@@ -1,10 +1,29 @@
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/constants/routes";
+import OrganicShape from "@/shared/decorations/OrganicShape";
 import styles from "./AuthLayout.module.css";
 
 const AuthLayout = ({ formContent, illustrationContent }) => {
   return (
     <div className={styles.wrapper}>
+        <OrganicShape
+          position="bottom-left"
+          width={160}
+          color="#e3eafe"
+          zIndex={0}
+          flipY
+          className={styles.cornerShape}
+        />
+        <OrganicShape
+          position="top-right"
+          width={200}
+          color="#e3eafe"
+          zIndex={0}
+          flipX
+          top={-40}
+          className={styles.cornerShape}
+        />
+
       <div className={styles.formCard}>
         <Link to={ROUTES.HOME} className={styles.logo}>
           <img

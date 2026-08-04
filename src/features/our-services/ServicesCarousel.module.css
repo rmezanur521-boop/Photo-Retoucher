@@ -1,0 +1,149 @@
+.section {
+  padding: 80px 24px;
+  background-color: var(--color-white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.stage {
+  position: relative;
+  max-width: 1180px;
+  margin: 40px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.slide {
+  flex-shrink: 0;
+}
+
+.slideActive {
+  flex: 0 0 700px;
+  max-width: 700px;
+}
+
+.activeCard {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.activeCard > :first-child {
+  flex: 0 0 380px;
+  max-width: 380px;
+}
+
+.details {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.description {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.price {
+  margin: 4px 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.slidePeek {
+  flex: 0 0 220px;
+  max-width: 220px;
+  opacity: 0.5;
+  filter: blur(0.5px);
+  pointer-events: none;
+}
+
+.slideLeft {
+  transform: translateX(40%);
+}
+
+.slideRight {
+  transform: translateX(-40%);
+}
+
+.navButton {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-dark);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  z-index: 2;
+}
+
+.navButton:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 1200px) {
+  .slidePeek {
+    display: none;
+  }
+
+  .slideActive {
+    flex: 1;
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 768px) {
+  .activeCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .activeCard > :first-child {
+    max-width: 100%;
+  }
+
+  .details {
+    text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+}

@@ -4,6 +4,7 @@ import { SERVICES_LIST } from "@/constants/services";
 import SectionTitle from "@/shared/section-title/SectionTitle";
 import ServiceCard from "@/shared/cards/ServiceCard";
 import Button from "@/shared/buttons/Button";
+import OrganicShape from "@/shared/decorations/OrganicShape";
 import StudioIntro from "./StudioIntro";
 import styles from "./Services.module.css";
 
@@ -13,6 +14,9 @@ const Services = () => {
       <StudioIntro />
 
       <section className={styles.servicesGrid}>
+        <OrganicShape position="top-left" width={260} color="#e3eafe" zIndex={0} />
+        <OrganicShape position="bottom-right" width={260} color="#e3eafe" zIndex={0} flipX flipY />
+
         <div className={styles.container}>
           <SectionTitle
             eyebrow="We're Your Virtual"

@@ -9,15 +9,17 @@ import {
   FOOTER_BOTTOM_LINKS,
 } from "@/constants/footerData";
 import { ROUTES } from "@/constants/routes";
+import OrganicShape from "@/shared/decorations/OrganicShape";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    
     <footer className={styles.footer}>
-      
+     <OrganicShape position="bottom-left" width={150} color="#e3eafe" zIndex={0} flipY className={styles.cornerShape} />
+<OrganicShape position="bottom-right" width={150} color="#e3eafe" zIndex={0} flipX flipY className={styles.cornerShape} />
+
       <div className={styles.container}>
         <div className={styles.brandColumn}>
           <Link to={ROUTES.HOME} className={styles.logo}>

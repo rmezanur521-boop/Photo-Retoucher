@@ -4,6 +4,7 @@ import {
   TESTIMONIALS,
   TESTIMONIALS_PER_PAGE,
 } from "@/constants/testimonialData";
+import OrganicShape from "@/shared/decorations/OrganicShape";
 import styles from "./Testimonial.module.css";
 
 const Testimonial = () => {
@@ -18,6 +19,8 @@ const Testimonial = () => {
 
   return (
     <section className={styles.section}>
+      <OrganicShape position="bottom-right" width={260} color="#e3eafe" zIndex={0} flipX flipY />
+
       <div className={styles.banner}>
         <div className={styles.bannerLeft}>
           <span className={styles.eyebrow}>Testimonial</span>

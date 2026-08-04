@@ -57,7 +57,7 @@
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background-color: var(--color-bg-soft);
+  background-color: #DCDCFF;
   border-radius: 14px;
   padding: 20px;
   margin-top: 16px;

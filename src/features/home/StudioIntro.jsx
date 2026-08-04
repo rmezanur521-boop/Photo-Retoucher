@@ -8,7 +8,7 @@ import styles from "./StudioIntro.module.css";
 const StudioIntro = () => {
   return (
     <section className={styles.section}>
-      <OrganicShape position="top-right" />
+      <OrganicShape position="top-right" width={280} color="#e3eafe" zIndex={0} flipX />
 
       <div className={styles.container}>
         <div className={styles.visual}>

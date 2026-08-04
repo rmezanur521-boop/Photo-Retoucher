@@ -124,13 +124,7 @@ const LoginForm = () => {
       </p>
     </form>
   );
-  <OrganicShape
-  position="bottom-left"
-  width={170}
-  left={0}
-  bottom={0}
-  zIndex={0}
-/>
+
 };
 
 export default LoginForm;

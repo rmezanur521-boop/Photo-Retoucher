@@ -274,12 +274,16 @@
 
 .servicesGrid {
   padding: 60px 24px 80px;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-bg-soft);
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .grid {

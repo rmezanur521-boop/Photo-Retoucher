@@ -11,6 +11,7 @@ import {
 import { ROUTES } from "@/constants/routes";
 import Button from "@/shared/buttons/Button";
 import SectionTitle from "@/shared/section-title/SectionTitle";
+import OrganicShape from "@/shared/decorations/OrganicShape";
 import styles from "./PricingCalculator.module.css";
 
 const PricingCalculator = () => {
@@ -44,6 +45,8 @@ const PricingCalculator = () => {
 
   return (
     <section className={styles.calculator}>
+      <OrganicShape position="bottom-right" width={260} color="#e3eafe" zIndex={0} flipX flipY />
+
       <div className={styles.container}>
         <SectionTitle
           eyebrow="Pricing Calculator"
