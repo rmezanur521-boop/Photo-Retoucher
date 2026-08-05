@@ -55,7 +55,7 @@ const BlogDetails = () => {
 
           <article className={styles.article}>
             <img
-              src={`/assets/images/blog/${post.id}-cover.jpg`}
+              src={`/assets/images/blog/${post.id}.png`}
               alt={post.title}
               className={styles.coverImage}
             />
@@ -74,11 +74,11 @@ const BlogDetails = () => {
             </p>
 
             <div className={styles.workflowSection}>
-              <img
-                src={`/assets/images/blog/${post.id}-workflow.jpg`}
-                alt="Path Photo Retouching Quality Control Workflow"
-                className={styles.workflowImage}
-              />
+             <img
+              src="/assets/images/blog/workflow.jpg"
+              alt="Path Photo Retouching Quality Control Workflow"
+              className={styles.workflowImage}
+            />
             </div>
 
             <p>{processExplanationText}</p>
