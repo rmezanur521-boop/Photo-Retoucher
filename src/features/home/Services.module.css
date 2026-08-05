@@ -116,8 +116,8 @@
 }
 
 .introHeading {
-  font-size: 34px;
-  font-weight: 800;
+  font-size: 48px;
+  font-weight: 600;
   color: var(--color-text-dark);
   line-height: 1.25;
 }

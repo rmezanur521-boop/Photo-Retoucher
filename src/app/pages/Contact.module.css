@@ -7,7 +7,7 @@
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.8fr 1.4fr;
   gap: 40px;
   align-items: start;
 }
@@ -23,19 +23,19 @@
 .contactInfo {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  background-color: var(--color-primary-soft, #dbe0fb);
-  border-radius: 16px;
-  padding: 28px 24px;
-  margin-top: 24px;
+  gap: 10px;
+  background-color:#BAC9F2;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-top: 20px;
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 15px;
-  font-weight: 500;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--color-text-dark);
   transition: color 0.2s ease;
 }

@@ -1,10 +1,10 @@
 .howItWorks {
   padding: 80px 24px;
-  background-color: var(--color-bg-light);
+  background-color: var(--color-white);
 }
 
 .container {
-  max-width: 1042px;
+  max-width: 1120px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -22,8 +22,9 @@
 
 .heading {
   margin: 12px 0 0;
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
   color: var(--color-text-dark);
 }
 
@@ -48,6 +49,10 @@
   gap: 24px;
 }
 
+.stepRow:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .stepNumberCol {
   display: flex;
   flex-direction: column;
@@ -59,7 +64,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,17 +84,28 @@
 .stepBody {
   position: relative;
   flex: 1;
-  padding-bottom: 32px;
+  padding-bottom: 20px;
+}
+
+.stepContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.stepInfo {
+  flex: 1;
 }
 
 .stepIcon {
   width: 56px;
   height: 56px;
-  border-radius: 10px;
-  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  border: 1px solid var(--color-text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .stepIcon img {
@@ -98,7 +114,7 @@
 }
 
 .stepTitle {
-  margin: 16px 0 8px;
+  margin: 0 0 6px;
   font-size: 18px;
   font-weight: 700;
   color: var(--color-text-dark);
@@ -118,19 +134,22 @@
   left: 0;
   right: 0;
   height: 1px;
-  background-color: var(--color-border);
+  background-color: var(--color-text-muted);
 }
 
 .right {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  padding-top: 24px;
 }
 
+/* Compact stage sized to the card cluster's actual footprint - no dead space */
 .visualWrapper {
   position: relative;
   width: 100%;
   max-width: 460px;
-  height: 700px;
+  height: 560px;
 }
 
 .connectorLines {
@@ -143,22 +162,26 @@
 
 .card {
   position: absolute;
+  z-index: 2;
   background: var(--color-white);
-  border-radius: 14px;
-  box-shadow: 0 18px 40px rgba(24, 42, 82, 0.08);
+  border: 1px solid var(--color-text-muted);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(24, 42, 82, 0.12), 0 2px 6px rgba(24, 42, 82, 0.04);
+  overflow: hidden;
 }
 
+/* ---------- Step 1: Upload ---------- */
 .uploadCard {
   top: 0;
-  left: 0;
-  width: 300px;
-  height: 190px;
+  left: 0px;
+  width: 250px;
+  height: 145px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .browserDots {
@@ -174,11 +197,18 @@
   height: 8px;
   border-radius: 50%;
   background: var(--color-primary);
-  opacity: 0.3;
 }
 
-.browserDots span:first-child {
+.browserDots span:nth-child(1) {
   opacity: 1;
+}
+
+.browserDots span:nth-child(2) {
+  opacity: 0.5;
+}
+
+.browserDots span:nth-child(3) {
+  opacity: 0.2;
 }
 
 .uploadIcon img {
@@ -193,63 +223,79 @@
   background: var(--color-primary);
 }
 
+.uploadBadge {
+  top: 16px;
+  left: 240px;
+  width: 170px;
+}
+
+/* ---------- Step 2: Before / After compare slider ---------- */
 .editCard {
-  top: 260px;
-  left: 40px;
-  width: 300px;
-  height: 190px;
-  display: flex;
+  top: 200px;
+  left: 100px;
+  width: 250px;
+  height: 145px;
+}
+
+
+/* Clip the "before" layer to the left half so it reads as a compare slider */
+.compareBefore {
+  width: 50%;
   overflow: hidden;
 }
 
-.editImageBefore,
-.editImageAfter {
-  flex: 1;
-  position: relative;
-}
-
-.editImageBefore img,
-.editImageAfter img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.editHandle {
+.compareDivider {
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  width: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(-1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compareHandle {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   background: var(--color-white);
+  box-shadow: 0 4px 10px rgba(24, 42, 82, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.editHandle img {
+.compareHandle img {
   width: 14px;
   height: 14px;
 }
 
+.editBadge {
+  top: 225px;
+  left: -40px;
+  width: 160px;
+}
+
+/* ---------- Step 3: Completed ---------- */
 .completedCard {
-  top: 480px;
-  left: 90px;
-  width: 300px;
-  height: 220px;
+  top: 400px;
+  left: 0px;
+  width: 250px;
+  height: 145px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-.completedIcon img {
-  width: 64px;
-  height: 64px;
+.completedIcon img,
+.completedIcon svg {
+  width: 40px;
+  height: 40px;
 }
 
 .completedLine {
@@ -265,40 +311,36 @@
   color: var(--color-text-dark);
 }
 
+.completedBadge {
+  top: 430px;
+  left: 240px;
+  width: 170px;
+}
+
+/* ---------- Shared badge styling ---------- */
 .badge {
   position: absolute;
+  z-index: 1;
   background: var(--color-bg-light);
+  border: 1px solid var(--color-text-muted);
   border-radius: 12px;
   padding: 14px 18px;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  max-width: 220px;
+  box-shadow: 0 12px 24px rgba(24, 42, 82, 0.06);
 }
 
 .badge strong {
   font-size: 15px;
+  font-weight: 700;
   color: var(--color-text-dark);
 }
 
 .badge span {
   font-size: 13px;
+  line-height: 1.5;
   color: var(--color-text-muted);
-}
-
-.uploadBadge {
-  top: 30px;
-  right: 0;
-}
-
-.editBadge {
-  top: 300px;
-  left: 0;
-}
-
-.completedBadge {
-  bottom: 20px;
-  right: 0;
 }
 
 @media (max-width: 992px) {
@@ -316,7 +358,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
   .howItWorks {
     padding: 50px 20px;
   }
@@ -326,16 +368,32 @@
   }
 
   .visualWrapper {
-    height: 620px;
+    width: 320px;
+    height: 780px;
+    margin: 0 auto;
   }
 
   .uploadCard,
   .editCard,
   .completedCard {
     width: 240px;
+    left: 0 !important;
   }
 
-  .badge {
-    max-width: 180px;
+  .compareAfter img,
+  .compareBefore img {
+    width: 240px;
+  }
+
+  .uploadBadge,
+  .editBadge,
+  .completedBadge {
+    position: static;
+    width: 240px;
+    margin: 12px auto 0;
+  }
+
+  .connectorLines {
+    display: none;
   }
 }

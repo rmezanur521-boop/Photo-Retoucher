@@ -16,16 +16,17 @@
 }
 
 .eyebrow {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  line-height: 121%;
   text-transform: uppercase;
   color: var(--color-primary);
 }
 
 .heading {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 600;
   color: var(--color-text-dark);
   max-width: 620px;
 }
@@ -35,10 +36,11 @@
 }
 
 .subtext {
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: 400px;
   color: var(--color-text-muted);
   max-width: 560px;
-  line-height: 1.6;
+  line-height: 150%;
 }
 .divider {
   display: block;

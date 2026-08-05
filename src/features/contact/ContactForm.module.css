@@ -1,7 +1,5 @@
 .form {
   background-color: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -9,9 +7,10 @@
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 00;
   color: var(--color-text-dark);
+  margin: 0;
 }
 
 .row {
@@ -27,8 +26,8 @@
 }
 
 .field label {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   color: var(--color-text-dark);
 }
 
@@ -44,7 +43,7 @@
   border-radius: 8px;
   font-size: 14px;
   color: var(--color-text-dark);
-  background-color: var(--color-bg-light);
+  background-color:#F3F4F6;
   resize: none;
 }
 
@@ -56,8 +55,8 @@
 }
 
 .successMessage {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: #16a34a;
   background-color: #ecfdf5;
   padding: 12px 16px;
@@ -70,6 +69,6 @@
   }
 
   .form {
-    padding: 20px;
+    padding: 24px 32px 32px;
   }
 }

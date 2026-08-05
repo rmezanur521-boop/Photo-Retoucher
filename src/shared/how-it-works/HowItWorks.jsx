@@ -1,4 +1,5 @@
 import styles from "./HowItWorks.module.css";
+import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
 
 const STEPS = [
   {
@@ -24,6 +25,20 @@ const STEPS = [
   },
 ];
 
+const CheckCircleIcon = () => (
+  <svg viewBox="0 0 64 64" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="32" cy="32" r="32" fill="var(--color-primary)" />
+    <path
+      d="M20 33 L28 41 L44 24"
+      stroke="#FFFFFF"
+      strokeWidth="4.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  </svg>
+);
+
 const HowItWorks = () => {
   return (
     <section className={styles.howItWorks}>
@@ -34,7 +49,7 @@ const HowItWorks = () => {
             How it <span>Works</span>
           </h2>
           <p className={styles.subtext}>
-            A simple, smooth process te get your images edited perfectly
+            A simple, smooth process to get your images edited perfectly
           </p>
 
           <div className={styles.steps}>
@@ -48,11 +63,15 @@ const HowItWorks = () => {
                 </div>
 
                 <div className={styles.stepBody}>
-                  <div className={styles.stepIcon}>
-                    <img src={step.icon} alt="" />
+                  <div className={styles.stepContent}>
+                    <div className={styles.stepIcon}>
+                      <img src={step.icon} alt="" />
+                    </div>
+                    <div className={styles.stepInfo}>
+                      <h3 className={styles.stepTitle}>{step.title}</h3>
+                      <p className={styles.stepText}>{step.description}</p>
+                    </div>
                   </div>
-                  <h3 className={styles.stepTitle}>{step.title}</h3>
-                  <p className={styles.stepText}>{step.description}</p>
                   {index !== STEPS.length - 1 && (
                     <span className={styles.stepDivider} />
                   )}
@@ -66,25 +85,27 @@ const HowItWorks = () => {
           <div className={styles.visualWrapper}>
             <svg
               className={styles.connectorLines}
-              viewBox="0 0 500 700"
+              viewBox="0 0 460 560"
               xmlns="http://www.w3.org/2000/svg"
+              fill="none"
             >
+              {/* upload card -> edit card */}
               <path
-                d="M60 150 C 0 220, 0 260, 90 300"
+                d="M60 145 C 20 165, 20 180, 140 200"
                 stroke="#0041FF"
                 strokeWidth="2"
                 strokeDasharray="6 6"
-                fill="none"
               />
+              {/* edit card -> completed card */}
               <path
-                d="M410 380 C 470 420, 470 460, 400 500"
+                d="M310 345 C 370 365, 370 385, 230 400"
                 stroke="#0041FF"
                 strokeWidth="2"
                 strokeDasharray="6 6"
-                fill="none"
               />
             </svg>
 
+            {/* Step 1 - Upload */}
             <div className={`${styles.card} ${styles.uploadCard}`}>
               <div className={styles.browserDots}>
                 <span />
@@ -101,31 +122,23 @@ const HowItWorks = () => {
               <span>Share your images and requirements.</span>
             </div>
 
+            {/* Step 2 - Edit (before / after compare) */}
             <div className={`${styles.card} ${styles.editCard}`}>
-              <div className={styles.editImageBefore}>
-                <img
-                  src="/assets/images/services/clipping-path-before.jpg"
-                  alt="Before"
-                />
-              </div>
-              <div className={styles.editImageAfter}>
-                <img
-                  src="/assets/images/services/clipping-path-after.jpg"
-                  alt="After"
-                />
-              </div>
-              <span className={styles.editHandle}>
-                <img src="/assets/icons/slider-arrows.svg" alt="" />
-              </span>
+              <BeforeAfterCard
+                variant="plain"
+                beforeImage="/assets/images/services/clipping-path-before.jpg"
+                afterImage="/assets/images/services/clipping-path-after.jpg"
+                aspectRatio="250 / 145"
+              />
             </div>
             <div className={`${styles.badge} ${styles.editBadge}`}>
               <strong>2. We Edit</strong>
               <span>Share your images and requirements.</span>
             </div>
-
+            {/* Step 3 - Completed */}
             <div className={`${styles.card} ${styles.completedCard}`}>
               <div className={styles.completedIcon}>
-                <img src="/assets/icons/check-circle.svg" alt="" />
+                <CheckCircleIcon />
               </div>
               <span className={styles.completedLine} />
               <span className={styles.completedText}>Completed</span>

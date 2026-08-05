@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
-import { ArrowRight} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SERVICES_LIST } from "@/constants/services";
 import { ROUTES } from "@/constants/routes";
 import Button from "@/shared/buttons/Button";
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
-import SectionTitle from "@/shared/section-title/SectionTitle";
-import ServiceCard from "@/shared/cards/ServiceCard";
+import PhotoEditingShowcase from "@/shared/photo-editing-showcase/PhotoEditingShowcase";
+import HowItWorks from "@/shared/how-it-works/HowItWorks";
 import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
 import OrganicShape from "@/shared/decorations/OrganicShape";
@@ -17,15 +17,16 @@ const ServiceDetails = () => {
   const service =
     SERVICES_LIST.find((item) => item.id === serviceId) || SERVICES_LIST[0];
 
-  const relatedServices = SERVICES_LIST.filter(
-    (item) => item.id !== service.id
-  ).slice(0, 4);
-
   return (
     <main>
       <section className={styles.hero}>
-        
-      <OrganicShape position="bottom-left" width={160} color="#e3eafe" zIndex={0} flipY />
+        <OrganicShape
+          position="bottom-left"
+          width={160}
+          color="#e3eafe"
+          zIndex={0}
+          flipY
+        />
 
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
@@ -60,23 +61,8 @@ const ServiceDetails = () => {
         </div>
       </section>
 
-      <section className={styles.relatedSection}>
-        <div className={styles.container}>
-          <SectionTitle
-            eyebrow="We're Your Virtual"
-            heading="All our photo-editing"
-            highlight="services"
-            subtext="From simple clipping paths to advanced photo retouching, we provide all the image solution you need."
-          />
-
-          <div className={styles.grid}>
-            {relatedServices.map((item) => (
-              <ServiceCard key={item.id} {...item} />
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <PhotoEditingShowcase />
+      <HowItWorks />
       <PricingCalculator />
       <Faq />
     </main>

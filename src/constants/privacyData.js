@@ -4,9 +4,7 @@ export const PRIVACY_SECTIONS = [
     title: "Red Flag 1: They Can’t Explain Their Quality Control Process",
     paragraphs: ["Effective as of August 22, 2021"],
     list: [
-      "Thank you for choosing Outsource Experts Ltd (“Path”, “we”, “us”, “our”). By signing up or otherwise visiting, using, or engaging with our website and services (together, the “Path’s Website” or “Site”), this Privacy Policy explains how we use any personal information we collect about you when you use this Site. Please note that we may update this policy from time to time.",
-      "By visiting this website, you consent to the collection and use of your Personal Data as described herein. If you do not agree with the terms set out herein, please do not visit this website. If required by applicable law,",
-      "we will seek your explicit consent to process Personal Data collected on this website or volunteered by you. Kindly note that any consent will be entirely voluntary. However, if you do not grant the requested consent to the processing of your Personal Data, the use of this website may not be possible.",
+      "Thank you for choosing Outsource Experts Ltd (“Path”, “we”, “us”, “our”). By signing up or otherwise visiting, using, or engaging with our website and services (together, the “Path’s Website” or “Site”), this Privacy Policy explains how we use any personal information we collect about you when you use this Site. Please note that we may update this policy from time to time. By visiting this website, you consent to the collection and use of your Personal Data as described herein. If you do not agree with the terms set out herein, please do not visit this website. If required by applicable law,we will seek your explicit consent to process Personal Data collected on this website or volunteered by you. Kindly note that any consent will be entirely voluntary. However, if you do not grant the requested consent to the processing of your Personal Data, the use of this website may not be possible.",
     ],
   },
   {

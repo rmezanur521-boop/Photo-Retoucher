@@ -26,18 +26,18 @@
 }
 
 .eyebrow {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-accent);
 }
 
 .heading {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 600;
   color: var(--color-white);
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .bannerText {

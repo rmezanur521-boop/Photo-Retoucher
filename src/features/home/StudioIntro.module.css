@@ -136,8 +136,8 @@
 }
 
 .heading {
-  font-size: 34px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 600;
   color: var(--color-text-dark);
   line-height: 1.25;
 }
@@ -147,9 +147,9 @@
 }
 
 .text {
-  font-size: 15px;
+  font-size: 20px;
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: 1.5;
   max-width: 500px;
 }
 
