@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { COUNTRY_CODES } from "@/constants/countryCodes";
 import styles from "./PhoneInput.module.css";
@@ -6,16 +6,26 @@ import styles from "./PhoneInput.module.css";
 const PhoneInput = ({ value, onChange, id = "phoneNumber" }) => {
   const [countryId, setCountryId] = useState(COUNTRY_CODES[0].id);
   const [isOpen, setIsOpen] = useState(false);
+  const wrapperRef = useRef(null);
 
   const selectedCountry = COUNTRY_CODES.find((c) => c.id === countryId);
 
-  const handleSelectCountry = (id) => {
-    setCountryId(id);
-    setIsOpen(false);
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
   };
 
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
   return (
-    <div className={styles.wrapper}>
+    <div ref={wrapperRef} className={styles.wrapper}>
       <div className={styles.countrySelect}>
         <button
           type="button"

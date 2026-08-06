@@ -1,4 +1,5 @@
 import { WHY_CHOOSE_US_ITEMS } from "@/constants/whyChooseUsData";
+import { Link } from "react-router-dom"
 import SectionTitle from "@/shared/section-title/SectionTitle";
 import styles from "./WhyChooseUs.module.css";
 
@@ -24,9 +25,9 @@ const WhyChooseUs = () => {
               <h3 className={styles.title}>{item.title}</h3>
               <p className={styles.description}>{item.description}</p>
               {item.linkText && (
-                <a href={item.linkHref || "#"} className={styles.link}>
+                <Link to href={item.linkHref || "#"} className={styles.link}>
                   {item.linkText}
-                </a>
+                </Link>
               )}
               <span className={styles.underline} />
             </div>

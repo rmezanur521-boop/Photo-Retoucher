@@ -2,57 +2,11 @@ import { useEffect, useState, useCallback } from "react";
 import { ArrowRight } from "lucide-react";
 import { ROUTES } from "@/constants/routes";
 import Button from "@/shared/buttons/Button";
+import { HERO_STATS } from "@/constants/heroData";
+import { HERO_SLIDES } from "@/constants/heroData";
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
 import OrganicShape from "@/shared/decorations/OrganicShape";
 import styles from "./Hero.module.css";
-
-const STATS = [
-  {
-    icon: "/assets/icons/image-icon.png",
-    value: "50,000+",
-    label: "Image Edited Daily",
-  },
-  {
-    icon: "/assets/icons/users-icon.png",
-    value: "42,000+",
-    label: "Happy Clients",
-  },
-  {
-    icon: "/assets/icons/satisfaction-icon.png",
-    value: "98%",
-    label: "Client Satisfaction",
-  },
-  {
-    icon: "/assets/icons/turnaround-icon.png",
-    value: "6-24h",
-    label: "Average Turnaround",
-  },
-];
-
-const HERO_SLIDES = [
-  
-  {
-    id: "bag",
-    beforeImage: "/assets/images/services/bag-before.jpg",
-    afterImage: "/assets/images/services/bag-after.jpg",
-  },
-  {
-    id: "background-removal",
-    beforeImage: "/assets/images/services/background-removal-before.jpg",
-    afterImage: "/assets/images/services/background-removal-after.jpg",
-  },
-  {
-    id: "image-masking",
-    beforeImage: "/assets/images/services/image-masking-before.jpg",
-    afterImage: "/assets/images/services/image-masking-after.jpg",
-  },
-  {
-    id: "jewelry-retouching",
-    beforeImage: "/assets/images/services/jewelry-retouching-before.jpg",
-    afterImage: "/assets/images/services/jewelry-retouching-after.jpg",
-  },
-
-];
 
 const AUTOPLAY_INTERVAL = 5000;
 
@@ -192,7 +146,7 @@ const Hero = () => {
 
       <div className={styles.statsBar}>
         <div className={styles.statsContainer}>
-          {STATS.map(({ icon, value, label }, i) => (
+          {HERO_STATS.map(({ id, icon, value, label }, i) => (
             <div className={styles.stat} key={i}>
               <div className={styles.iconCircle}>
                 <img src={icon} alt={label} className={styles.statIcon} />
@@ -201,7 +155,7 @@ const Hero = () => {
                 <span className={styles.statValue}>{value}</span>
                 <span className={styles.statLabel}>{label}</span>
               </div>
-              {i < STATS.length - 1 && <div className={styles.divider} />}
+              {i < HERO_STATS.length - 1 && <div className={styles.divider} />}
             </div>
           ))}
         </div>

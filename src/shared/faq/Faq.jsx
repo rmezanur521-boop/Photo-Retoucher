@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"
 import { Plus, Minus } from "lucide-react";
 import { ROUTES } from "@/constants/routes";
 import { FAQ_ITEMS } from "@/constants/faqData";
@@ -44,9 +45,9 @@ const Faq = () => {
               <p className={styles.supportSubtitle}>
                 Our support team is here to help you.
               </p>
-              <a href={ROUTES.CONTACT} className={styles.supportLink}>
+              <Link to={ROUTES.CONTACT} className={styles.supportLink}>
                 Contact us →
-              </a>
+              </Link>
             </div>
           </div>
         </div>

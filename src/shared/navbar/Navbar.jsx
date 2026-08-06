@@ -48,6 +48,7 @@ const Navbar = () => {
           <span className={styles.logoText}>
             <img
             src="/assets/logos/logo-text.svg"
+            alt="Photo Text"
           />
           </span>
         </Link>

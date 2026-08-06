@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom"
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
 import styles from "./ServiceCard.module.css";
 
@@ -14,9 +15,9 @@ const ServiceCard = ({ id, label, description }) => {
       <h3 className={styles.title}>{label}</h3>
       <p className={styles.description}>{description}</p>
 
-      <a href={`/services/${id}`} className={styles.link}>
+      <Link to={`/services/${id}`} className={styles.link}>
         Learn More <ArrowRight size={14} />
-      </a>
+      </Link>
     </div>
   );
 };
