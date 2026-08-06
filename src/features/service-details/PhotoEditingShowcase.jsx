@@ -30,7 +30,7 @@ const PhotoEditingShowcase = () => {
     <section className={styles.showcase}>
       <div className={styles.container}>
         <SectionTitle
-          eyebrow="We're Your Virtual"
+          eyebrow="We&apos;re Your Virtual"
           heading={[
                       "All our ",
                       { text: "photo-editing ", highlight: true },

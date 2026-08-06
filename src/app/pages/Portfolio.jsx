@@ -21,16 +21,16 @@ const Portfolio = () => {
 
   return (
     <main>
-      <SectionTitle
-              eyebrow="Frequently Asked Question"
-              heading="Our Work,"
-              highlight="Advantage"
-              subtext="Explore a selection of real projects completed by our team. From clipping path to advanced retouching, every edit is crafted with precision, consistency, and attention to detail."
-            />
+      <PageHeader
+        eyebrow="Frequently Asked Question"
+        title="Our Work,"
+        highlight="Advantage"
+        subtext="Explore a selection of real projects completed by our team. From clipping path to advanced retouching, every edit is crafted with precision, consistency, and attention to detail."
+      />
       <section className={styles.gridSection}>
         <div className={styles.container}>
           <SectionTitle
-            eyebrow="We're Your Virtual"
+            eyebrow="We&apos;re Your Virtual"
             heading="All our photo-editing"
             highlight="services"
             subtext="From simple clipping paths to advanced photo retouching, we provide all the image solution you need."

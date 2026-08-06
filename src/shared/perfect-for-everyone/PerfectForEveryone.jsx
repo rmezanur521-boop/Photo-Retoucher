@@ -17,7 +17,7 @@ const PerfectForEveryone = () => {
       <div className={styles.container}>
         <SectionTitle
           eyebrow="Perfect For Everyone"
-          heading="You don't have to do everything"
+          heading="You don&apos;t have to do everything"
           highlight="yourself"
           subtext="From simple clipping paths to advanced photo retouching, Outsourced image editing services are ideal if you are…"
         />

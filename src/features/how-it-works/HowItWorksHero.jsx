@@ -14,7 +14,7 @@ const HowItWorksHero = () => {
                       { text: "pixel perfect ", highlight: true },
                       "photo edits",
                     ]}
-            subtext="Here's how we make it easy to get fast, affordable product photo edits — all done by hand by pro designers."
+            subtext="Here&apos;s how we make it easy to get fast, affordable product photo edits — all done by hand by pro designers."
           />
 
           <button className={styles.button}>

@@ -1,7 +1,7 @@
 import HowItWorksHero from "@/features/how-it-works/HowItWorksHero";
 import StepList from "@/features/how-it-works/StepList";
 import PerfectForEveryone from "@/shared/perfect-for-everyone/PerfectForEveryone";
-import ServicesCarousel from "@/features/our-services/ServicesCarousel";
+import ServicesCarousel from "@/features/how-it-works/ServicesCarousel";
 import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
 

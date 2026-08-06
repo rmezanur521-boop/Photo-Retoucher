@@ -144,7 +144,7 @@
   padding-top: 24px;
 }
 
-/* Compact stage sized to the card cluster's actual footprint - no dead space */
+/* Compact stage sized to the card clusters actual footprint - no dead space */
 .visualWrapper {
   position: relative;
   width: 100%;

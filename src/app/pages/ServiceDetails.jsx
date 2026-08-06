@@ -4,13 +4,13 @@ import { SERVICES_LIST } from "@/constants/services";
 import { ROUTES } from "@/constants/routes";
 import Button from "@/shared/buttons/Button";
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
-import PhotoEditingShowcase from "@/features/photo-editing-showcase/PhotoEditingShowcase";
-import HowItWorks from "@/shared/how-it-works/HowItWorks";
+import PhotoEditingShowcase from "@/features/service-details/PhotoEditingShowcase";
 import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
 import OrganicShape from "@/shared/decorations/OrganicShape";
 import styles from "./ServiceDetails.module.css";
 import SectionTitle from "@/shared/section-title/SectionTitle";
+import HowItWorks from "@/features/service-details/HowItWorks";
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();

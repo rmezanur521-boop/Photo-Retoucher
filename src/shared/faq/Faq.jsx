@@ -30,7 +30,7 @@ const Faq = () => {
               align="left"
               eyebrow="Frequently Asked Question"
               heading={[
-                "Read our FAQ's for ",
+                "Read our FAQ&apos;s for ",
                 { text: "Clarification", highlight: true },
               ]}
               subtext="Professional photo editing services for e-commerce, product, apparel, headshot, and portrait photography."

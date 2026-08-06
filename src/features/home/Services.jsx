@@ -19,7 +19,7 @@ const Services = () => {
 
         <div className={styles.container}>
           <SectionTitle
-            eyebrow="We're Your Virtual"
+            eyebrow="We&apos;re Your Virtual"
             heading="Professional image editing services to grow your"
             highlight="business"
             subtext="From simple clipping paths to advanced photo retouching, we provide all the image solutions you need."

@@ -12,15 +12,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
 }
 
 .track {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .slide {
@@ -86,11 +88,12 @@
   max-width: 220px;
   opacity: 0.5;
   filter: blur(0.5px);
-  pointer-events: none;
+  pointer-events: none
 }
 
 .slideLeft {
   transform: translateX(40%);
+  
 }
 
 .slideRight {
@@ -98,11 +101,13 @@
 }
 
 .navButton {
-  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1.5px solid var(--color-border);
+  border: 1.5px solid var(--color-primary);
   background-color: var(--color-white);
   display: flex;
   align-items: center;
@@ -110,7 +115,7 @@
   color: var(--color-text-dark);
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease;
-  z-index: 2;
+  z-index: 3;
 }
 
 .navButton:hover {
@@ -118,6 +123,13 @@
   color: var(--color-primary);
 }
 
+.navLeft {
+  left: 200px;
+}
+
+.navRight {
+  right: 200px;
+}
 @media (max-width: 1200px) {
   .slidePeek {
     display: none;
@@ -126,6 +138,14 @@
   .slideActive {
     flex: 1;
     max-width: 640px;
+  }
+
+  .navLeft {
+    left: 8px;
+  }
+
+  .navRight {
+    right: 8px;
   }
 }
 
