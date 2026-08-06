@@ -1,8 +1,8 @@
 import styles from "./FilterTabs.module.css";
 
-const FilterTabs = ({ categories, activeCategory, onChange }) => {
+const FilterTabs = ({ categories, activeCategory, onChange, className = "" }) => {
   return (
-    <div className={styles.tabs}>
+    <div className={`${styles.tabs} ${className}`}>
       {categories.map((category) => (
         <button
           key={category}

@@ -33,6 +33,7 @@ const AllServicesSection = () => {
           categories={SERVICE_CATEGORIES}
           activeCategory={activeCategory}
           onChange={setActiveCategory}
+          className={styles.tabsScope}
         />
 
         <div className={styles.grid}>

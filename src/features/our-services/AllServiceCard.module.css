@@ -16,6 +16,7 @@
 .content {
   flex: 1;
   display: flex;
+  min-width: 0;
   flex-direction: column;
   gap: 6px;
 }
@@ -45,6 +46,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+.actions > a,
+.actions > button {
+  font-size: clamp(12px, 1vw, 15px);
+  padding: 10px 14px;
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.actions > a span:first-child,
+.actions > button span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 480px) {

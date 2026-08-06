@@ -2,7 +2,7 @@ export const BLOG_CATEGORIES = [
   "All",
   "Product Photo Editing",
   "Photo Retouching",
-  "Real Estate Photo Editing",
+  "Real Estate",
   "Jewellery Photo",
   "Photo Restoration",
   "Motion & Video",
