@@ -33,8 +33,10 @@ const AuthLayout = ({ formContent, illustrationContent }) => {
             className={styles.logoIcon}
           />
           <span className={styles.logoText}>
-            <img src="/assets/logos/logo-text.svg"/>
+            <img src="/assets/logos/logo-text.svg"
             alt="Photo Retoucher"
+            />
+            
           </span>
         </Link>
 

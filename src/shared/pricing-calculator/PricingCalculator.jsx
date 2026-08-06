@@ -22,7 +22,7 @@ const PricingCalculator = () => {
   const selectedService = CALCULATOR_SERVICES.find((s) => s.id === serviceId);
   const selectedTurnaround = TURNAROUND_OPTIONS.find((t) => t.id === turnaroundId);
 
-  const { pricePerImage, subtotal, discountAmount, total, hasDiscount } =
+  const { pricePerImage, discountAmount, total, hasDiscount } =
     useMemo(() => {
       const price = selectedService.basePrice * selectedTurnaround.multiplier;
       const sub = price * photoCount;
@@ -31,7 +31,6 @@ const PricingCalculator = () => {
 
       return {
         pricePerImage: price,
-        subtotal: sub,
         discountAmount: discount,
         total: sub - discount,
         hasDiscount: isEligible,
