@@ -9,7 +9,6 @@ import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
 import OrganicShape from "@/shared/decorations/OrganicShape";
 import styles from "./ServiceDetails.module.css";
-import SectionTitle from "@/shared/section-title/SectionTitle";
 import HowItWorks from "@/features/service-details/HowItWorks";
 
 const ServiceDetails = () => {

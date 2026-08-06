@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./OrganicShape.module.css";
 
 const POSITION_CLASS_MAP = {
@@ -60,6 +61,23 @@ const OrganicShape = ({
       />
     </svg>
   );
+};
+
+OrganicShape.propTypes = {
+  position: PropTypes.string,
+  width: PropTypes.number,
+  color: PropTypes.string,
+  opacity: PropTypes.number,
+  rotation: PropTypes.number,
+  flipX: PropTypes.bool,
+  flipY: PropTypes.bool,
+  zIndex: PropTypes.number,
+  top: PropTypes.number,
+  right: PropTypes.number,
+  bottom: PropTypes.number,
+  left: PropTypes.number,
+  style: PropTypes.object,
+  className: PropTypes.string,
 };
 
 export default OrganicShape;

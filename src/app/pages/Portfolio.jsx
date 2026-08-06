@@ -5,7 +5,6 @@ import FilterTabs from "@/shared/filter-tabs/FilterTabs";
 import PortfolioCard from "@/features/portfolio/PortfolioCard";
 import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
-import headerStyles from "@/shared/page-header/PageHeader.module.css";
 import { PORTFOLIO_CATEGORIES, PORTFOLIO_ITEMS } from "@/constants/portfolioData";
 import styles from "./Portfolio.module.css";
 

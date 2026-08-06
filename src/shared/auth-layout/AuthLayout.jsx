@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/constants/routes";
 import OrganicShape from "@/shared/decorations/OrganicShape";
@@ -33,6 +34,7 @@ const AuthLayout = ({ formContent, illustrationContent }) => {
           />
           <span className={styles.logoText}>
             <img src="/assets/logos/logo-text.svg"/>
+            alt="Photo Retoucher"
           </span>
         </Link>
 
@@ -42,6 +44,11 @@ const AuthLayout = ({ formContent, illustrationContent }) => {
       <div className={styles.illustrationCard}>{illustrationContent}</div>
     </div>
   );
+};
+
+AuthLayout.propTypes = {
+  formContent: PropTypes.node.isRequired,
+  illustrationContent: PropTypes.node,
 };
 
 export default AuthLayout;

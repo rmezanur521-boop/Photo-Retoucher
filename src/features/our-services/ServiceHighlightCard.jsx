@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
 import styles from "./ServiceHighlightCard.module.css";
 
@@ -12,6 +13,13 @@ const ServiceHighlightCard = ({ title, description, beforeImage, afterImage }) =
       </div>
     </div>
   );
+};
+
+ServiceHighlightCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  beforeImage: PropTypes.string.isRequired,
+  afterImage: PropTypes.string.isRequired,
 };
 
 export default ServiceHighlightCard;

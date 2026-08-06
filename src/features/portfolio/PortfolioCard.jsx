@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
 import styles from "./PortfolioCard.module.css";
 
@@ -11,6 +12,10 @@ const PortfolioCard = ({ id }) => {
       />
     </div>
   );
+};
+
+PortfolioCard.propTypes = {
+  id: PropTypes.string.isRequired,
 };
 
 export default PortfolioCard;

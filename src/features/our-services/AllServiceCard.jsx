@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { ArrowRight } from "lucide-react";
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
 import Button from "@/shared/buttons/Button";
@@ -35,6 +36,14 @@ const AllServiceCard = ({ service }) => {
       </div>
     </div>
   );
+};
+
+AllServiceCard.propTypes = {
+  service: PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    description: PropTypes.string,
+  }).isRequired,
 };
 
 export default AllServiceCard;

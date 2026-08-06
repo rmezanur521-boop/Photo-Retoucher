@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./BeforeAfterCard.module.css";
 
 const BeforeAfterCard = ({
@@ -48,6 +49,13 @@ const BeforeAfterCard = ({
       )}
     </div>
   );
+};
+
+BeforeAfterCard.propTypes = {
+  beforeImage: PropTypes.string.isRequired,
+  afterImage: PropTypes.string.isRequired,
+  thumbnailImage: PropTypes.string,
+  variant: PropTypes.string,
 };
 
 export default BeforeAfterCard;

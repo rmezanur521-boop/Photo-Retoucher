@@ -146,7 +146,7 @@ const Hero = () => {
       <div className={styles.statsBar}>
         <div className={styles.statsContainer}>
           {HERO_STATS.map(({ id, icon, value, label }, i) => (
-            <div className={styles.stat} key={i}>
+            <div className={styles.stat} key={id}>
               <div className={styles.iconCircle}>
                 <img src={icon} alt={label} className={styles.statIcon} />
               </div>

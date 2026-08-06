@@ -4,7 +4,6 @@ import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
 import headerStyles from "@/shared/page-header/PageHeader.module.css";
 import styles from "./Contact.module.css";
-import SectionTitle from "@/shared/section-title/SectionTitle";
 
 const CONTACT_ITEMS = [
   {

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import styles from "./FilterTabs.module.css";
 
 const FilterTabs = ({ categories, activeCategory, onChange, className = "" }) => {
@@ -17,6 +18,13 @@ const FilterTabs = ({ categories, activeCategory, onChange, className = "" }) =>
       ))}
     </div>
   );
+};
+
+FilterTabs.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  activeCategory: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  className: PropTypes.string,
 };
 
 export default FilterTabs;

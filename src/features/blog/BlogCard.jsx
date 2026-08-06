@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Clock, ArrowRight } from "lucide-react";
 import styles from "./BlogCard.module.css";
@@ -38,6 +39,15 @@ const BlogCard = ({ id, title, author, date, category, readTime }) => {
       </div>
     </article>
   );
+};
+
+BlogCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  readTime: PropTypes.string.isRequired,
 };
 
 export default BlogCard;

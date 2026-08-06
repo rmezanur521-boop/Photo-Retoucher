@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Button.module.css";
 
@@ -36,6 +37,18 @@ const Button = ({
       {icon && <span className={styles.icon}>{icon}</span>}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string,
+  onClick: PropTypes.func,
+  variant: PropTypes.string,
+  type: PropTypes.string,
+  icon: PropTypes.node,
+  fullWidth: PropTypes.bool,
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default Button;

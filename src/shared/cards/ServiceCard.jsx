@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom"
 import BeforeAfterCard from "@/shared/cards/BeforeAfterCard";
@@ -20,6 +21,12 @@ const ServiceCard = ({ id, label, description }) => {
       </Link>
     </div>
   );
+};
+
+ServiceCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default ServiceCard;

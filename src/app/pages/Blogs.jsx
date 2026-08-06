@@ -4,7 +4,6 @@ import FilterTabs from "@/shared/filter-tabs/FilterTabs";
 import BlogCard from "@/features/blog/BlogCard";
 import Pagination from "@/shared/pagination/Pagination";
 import { BLOG_CATEGORIES, BLOG_POSTS } from "@/constants/blogData";
-import SectionTitle from "@/shared/section-title/SectionTitle";
 import styles from "./Blogs.module.css";
 
 const POSTS_PER_PAGE = 9;

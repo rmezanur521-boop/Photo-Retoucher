@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { cloneElement, isValidElement } from "react";
 import styles from "./SectionTitle.module.css";
 
@@ -60,6 +61,19 @@ const SectionTitle = ({
       {divider && <span className={styles.divider} />}
     </div>
   );
+};
+
+SectionTitle.propTypes = {
+  eyebrow: PropTypes.string,
+  heading: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.node]),
+  highlight: PropTypes.string,
+  subtext: PropTypes.string,
+  align: PropTypes.string,
+  divider: PropTypes.bool,
+  wrapperClassName: PropTypes.string,
+  eyebrowClassName: PropTypes.string,
+  headingClassName: PropTypes.string,
+  subtextClassName: PropTypes.string,
 };
 
 export default SectionTitle;

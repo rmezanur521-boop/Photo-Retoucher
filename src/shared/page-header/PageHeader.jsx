@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import SectionTitle from "@/shared/section-title/SectionTitle";
 import styles from "./PageHeader.module.css";
 
@@ -31,6 +32,17 @@ const PageHeader = ({
       </div>
     </section>
   );
+};
+
+PageHeader.propTypes = {
+  eyebrow: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.node]),
+  highlight: PropTypes.string,
+  subtext: PropTypes.string,
+  align: PropTypes.string,
+  divider: PropTypes.bool,
+  background: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default PageHeader;
