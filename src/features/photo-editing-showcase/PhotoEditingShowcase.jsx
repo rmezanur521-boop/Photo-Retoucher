@@ -31,12 +31,14 @@ const PhotoEditingShowcase = () => {
       <div className={styles.container}>
         <SectionTitle
           eyebrow="We're Your Virtual"
-          heading="All our photo-editing"
-          highlight="services"
+          heading={[
+                      "All our ",
+                      { text: "photo-editing ", highlight: true },
+                      "services",
+                    ]}
           subtext="From simple clipping paths to advanced photo retouching, we provide all the image solution you need."
           align="center"
         />
-
         <div className={styles.demo}>
           <BeforeAfterCard
             variant="plain"

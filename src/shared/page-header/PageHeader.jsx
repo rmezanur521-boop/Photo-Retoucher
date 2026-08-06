@@ -1,16 +1,33 @@
-// import OrganicShape from "@/shared/decorations/OrganicShape";
+import SectionTitle from "@/shared/section-title/SectionTitle";
 import styles from "./PageHeader.module.css";
 
-const PageHeader = ({ eyebrow, title, subtext }) => {
+const PageHeader = ({
+  eyebrow,
+  title,
+  highlight,
+  subtext,
+  align = "center",
+  divider = false,
+  background = true,
+  className,
+}) => {
   return (
-    <section className={styles.header}>
-      
-      {/* <OrganicShape position="bottom-left" width={120} color="#e3eafe" zIndex={0} flipY /> */}
-
+    <section
+      className={`${styles.header} ${!background ? styles.noBackground : ""} ${className || ""}`}
+    >
       <div className={styles.container}>
-        {eyebrow && <span className={styles.eyebrow}>{eyebrow}</span>}
-        <h1 className={styles.heading}>{title}</h1>
-        {subtext && <p className={styles.subtext}>{subtext}</p>}
+        <SectionTitle
+          eyebrow={eyebrow}
+          heading={title}
+          highlight={highlight}
+          subtext={subtext}
+          align={align}
+          divider={divider}
+          wrapperClassName={styles.sectionTitleWrapper}
+          eyebrowClassName={styles.eyebrow}
+          headingClassName={styles.heading}
+          subtextClassName={styles.subtext}
+        />
       </div>
     </section>
   );

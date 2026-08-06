@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, ShieldCheck, ArrowRight } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
 import {
   FOOTER_COMPANY_LINKS,
   FOOTER_SERVICE_LINKS,

@@ -4,6 +4,7 @@ import PricingCalculator from "@/shared/pricing-calculator/PricingCalculator";
 import Faq from "@/shared/faq/Faq";
 import headerStyles from "@/shared/page-header/PageHeader.module.css";
 import styles from "./Contact.module.css";
+import SectionTitle from "@/shared/section-title/SectionTitle";
 
 const CONTACT_ITEMS = [
   {
@@ -37,19 +38,10 @@ const Contact = () => {
     <main>
       <PageHeader
         eyebrow="Contact Us"
-        title={
-          <>
-            Need a quote, have a question,
-            <br />
-            or want to{" "}
-            <span className={headerStyles.highlight}>
-              discuss a project?
-            </span>
-          </>
-        }
+        title="Need a quote, have a question, or want to "
+        highlight="discuss a project?"
         subtext="Get professionally edited images in as little as 6 hours."
       />
-
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.illustrationWrapper}>

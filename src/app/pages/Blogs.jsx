@@ -4,6 +4,7 @@ import FilterTabs from "@/shared/filter-tabs/FilterTabs";
 import BlogCard from "@/features/blog/BlogCard";
 import Pagination from "@/shared/pagination/Pagination";
 import { BLOG_CATEGORIES, BLOG_POSTS } from "@/constants/blogData";
+import SectionTitle from "@/shared/section-title/SectionTitle";
 import styles from "./Blogs.module.css";
 
 const POSTS_PER_PAGE = 9;
@@ -36,18 +37,14 @@ const Blogs = () => {
 
   return (
     <main>
-      <PageHeader
-        eyebrow="Our Blogs"
-        title={
-          <>
-            Insights, Tips &amp; Resources
-            <br />
-            For Better Product Photography
-          </>
-        }
-        subtext="Expert guides, editing techniques, ecommerce tips, and industry insights to help you create images that sell."
-      />
-
+        <PageHeader
+          eyebrow="Our Blogs"
+          title={[
+            "Insights, Tips & Resources For Better Product ",
+            { text: "Photography", highlight: true },
+          ]}
+          subtext="Expert guides, editing techniques, ecommerce tips, and industry insights to help you create images that sell."
+        />
       <section className={styles.section}>
         <div className={styles.container}>
           <FilterTabs

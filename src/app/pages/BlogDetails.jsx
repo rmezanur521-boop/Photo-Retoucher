@@ -6,6 +6,7 @@ import {
 } from "@/constants/blogData";
 import BlogCard from "@/features/blog/BlogCard";
 import styles from "./BlogDetails.module.css";
+import PageHeader from "@/shared/page-header/PageHeader";
 
 const BlogDetails = () => {
   const { blogId } = useParams();
@@ -21,18 +22,17 @@ const BlogDetails = () => {
 
   return (
     <main>
-      <section className={styles.header}>
-        <div className={styles.headerContainer}>
-          <span className={styles.eyebrow}>{post.category}</span>
-          <h1 className={styles.title}>{post.title}</h1>
-          <p className={styles.subtext}>
-            Picking the wrong photo retouching company costs more than the
-            invoice. Use these five red flags to vet any retouching agency
-            before you commit.
-          </p>
-        </div>
-      </section>
-
+     <PageHeader
+        eyebrow="Product Photography"
+        title={[
+          "How to Choose a ",
+          { text: "Photo Retouching", highlight: true },
+          " Company: 5 Red Flags To Avoid",
+        ]}
+        subtext="Picking the wrong photo retouching company costs more than the
+          invoice. Use these five red flags to vet any retouching agency
+          before you commit."
+      />
       <section className={styles.content}>
         <div className={styles.contentContainer}>
           <aside className={styles.sidebar}>

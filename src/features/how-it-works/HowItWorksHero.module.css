@@ -98,6 +98,10 @@
   height: 100%;
   object-fit: contain;
 }
+.sectionTitleWrapper {
+  gap: 0;
+  margin-bottom: 0;
+}
 
 @media (max-width: 1400px) {
   .container {

@@ -21,37 +21,21 @@
   gap: 14px;
 }
 
-.eyebrow {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--color-primary);
+.titleWrap {
+  position: relative;
+}
+
+.titleWrap > div > h2 {
+  margin-top: 76px;
 }
 
 .infoIcon {
+  position: absolute;
+  top: 26px;
+  left: 0;
   width: 64px;
   height: 64px;
-  margin: 6px 0;
-}
-
-.heading {
-  font-size: 48px;
-  font-weight: 600;
-  color: var(--color-text-dark);
-  line-height: 130%;
-}
-
-.heading span {
-  color: var(--color-primary);
-}
-
-.subtext {
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--color-text-muted);
-  line-height: 150%;
-  max-width: 380px;
+  z-index: 1;
 }
 
 .supportCard {
@@ -163,15 +147,6 @@
 }
 
 @media (max-width: 576px) {
-  .heading {
-    font-size: 24px;
-  }
-
-  .subtext,
-  .supportCard {
-    max-width: 100%;
-  }
-
   .accordionItem {
     padding: 16px 18px;
   }

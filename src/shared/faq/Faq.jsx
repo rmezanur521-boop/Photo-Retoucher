@@ -4,6 +4,7 @@ import { Plus, Minus } from "lucide-react";
 import { ROUTES } from "@/constants/routes";
 import { FAQ_ITEMS } from "@/constants/faqData";
 import OrganicShape from "@/shared/decorations/OrganicShape";
+import SectionTitle from "@/shared/section-title/SectionTitle";
 import styles from "./Faq.module.css";
 
 const Faq = () => {
@@ -19,22 +20,22 @@ const Faq = () => {
 
       <div className={styles.container}>
         <div className={styles.info}>
-          <span className={styles.eyebrow}>Frequently Asked Question</span>
-
-          <img
-            src="/assets/icons/faq-question.svg"
-            alt=""
-            className={styles.infoIcon}
-          />
-
-          <h2 className={styles.heading}>
-            Read our FAQ&apos;s for <span>Clarification</span>
-          </h2>
-
-          <p className={styles.subtext}>
-            Professional photo editing services for e-commerce, product,
-            apparel, headshot, and portrait photography.
-          </p>
+          <div className={styles.titleWrap}>
+            <img
+              src="/assets/icons/faq-question.svg"
+              alt=""
+              className={styles.infoIcon}
+            />
+            <SectionTitle
+              align="left"
+              eyebrow="Frequently Asked Question"
+              heading={[
+                "Read our FAQ's for ",
+                { text: "Clarification", highlight: true },
+              ]}
+              subtext="Professional photo editing services for e-commerce, product, apparel, headshot, and portrait photography."
+            />
+          </div>
 
           <div className={styles.supportCard}>
             <span className={styles.supportIcon}>

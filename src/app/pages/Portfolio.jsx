@@ -21,18 +21,12 @@ const Portfolio = () => {
 
   return (
     <main>
-      <PageHeader
-        eyebrow="Portfolio"
-        title={
-          <>
-            Our Work,
-            <br />
-            Your <span className={headerStyles.highlight}>Advantage</span>
-          </>
-        }
-        subtext="Explore a selection of real projects completed by our team. From clipping path to advanced retouching, every edit is crafted with precision, consistency, and attention to detail."
-      />
-
+      <SectionTitle
+              eyebrow="Frequently Asked Question"
+              heading="Our Work,"
+              highlight="Advantage"
+              subtext="Explore a selection of real projects completed by our team. From clipping path to advanced retouching, every edit is crafted with precision, consistency, and attention to detail."
+            />
       <section className={styles.gridSection}>
         <div className={styles.container}>
           <SectionTitle

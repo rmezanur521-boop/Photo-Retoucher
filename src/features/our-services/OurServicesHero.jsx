@@ -4,6 +4,7 @@ import Button from "@/shared/buttons/Button";
 import OrganicShape from "@/shared/decorations/OrganicShape";
 import ServiceHighlightCard from "@/features/our-services/ServiceHighlightCard";
 import styles from "./OurServicesHero.module.css";
+import SectionTitle from "@/shared/section-title/SectionTitle";
 
 const HERO_THUMBNAILS = [
   {
@@ -35,17 +36,18 @@ const OurServicesHero = () => {
       <OrganicShape position="bottom-left" width={200} color="#e3eafe" zIndex={0} flipY />
 
       <div className={styles.container}>
-        <h1 className={styles.heading}>
-          Photo Retoucher Ltd Is Your Virtual
-          <br />
-          <span>Photo Editing</span> Studio
-        </h1>
-
-        <p className={styles.subtext}>
-          Upload your images and let our expert designers handle the tedious
+        <SectionTitle
+          eyebrow="Our Services"
+          heading={[
+                      "Photo Retoucher Ltd Is Your Virtual ",
+                      { text: "Photo Editing ", highlight: true },
+                      "Studio",
+                    ]}
+          subtext="Upload your images and let our expert designers handle the tedious
           work. Get clean, consistent, pixel-perfect results delivered in as
-          little as six hours.
-        </p>
+          little as six hours."
+          align="center"
+        />
 
         <div className={styles.actions}>
           <Button

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Eye, EyeOff, ArrowRight } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/constants/routes";
 import { SOCIAL_LOGIN_PROVIDERS } from "@/constants/authData";
 import Button from "@/shared/buttons/Button";
 import { loginUser } from "@/services/authService";
-import styles from "./LoginForm.module.css";
+import styles from "@/features/auth/AuthForm.module.css";
 
 const INITIAL_STATE = { email: "", password: "", rememberPassword: true };
 
@@ -124,7 +124,6 @@ const LoginForm = () => {
       </p>
     </form>
   );
-
 };
 
 export default LoginForm;

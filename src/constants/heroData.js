@@ -24,7 +24,7 @@ export const HERO_STATS = [
     label: "Average Turnaround",
   },
 ];
-const HERO_SLIDES = [
+export const HERO_SLIDES = [
   {
     id: "bag",
     beforeImage: "/assets/images/services/bag-before.jpg",

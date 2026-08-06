@@ -6,6 +6,12 @@
   text-align: center;
 }
 
+.noBackground {
+  background-color: transparent;
+  padding: 0;
+  overflow: visible;
+}
+
 .container {
   position: relative;
   z-index: 1;
@@ -15,6 +21,11 @@
   flex-direction: column;
   align-items: center;
   gap: 14px;
+}
+
+.sectionTitleWrapper {
+  gap: 14px;
+  margin-bottom: 0;
 }
 
 .eyebrow {
