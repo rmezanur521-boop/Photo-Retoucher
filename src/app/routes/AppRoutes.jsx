@@ -3,7 +3,7 @@ import { ROUTES } from "@/constants/routes";
 
 import AuthPageLayout from "@/app/layouts/AuthPageLayout";
 import MainLayout from "@/app/layouts/MainLayout";
-
+import Search from "@/app/pages/Search";
 import Home from "@/app/pages/Home";
 import About from "@/app/pages/About";
 import Contact from "@/app/pages/Contact";
@@ -42,6 +42,7 @@ const AppRoutes = () => {
         { path: "blog/:blogId", element: <BlogDetails /> },
         { path: "services/:serviceId", element: <ServiceDetails /> },
         { path: "privacy-policy", element: <Privacy /> },
+        { path: "search", element: <Search /> },
       ],
     },
   ]);

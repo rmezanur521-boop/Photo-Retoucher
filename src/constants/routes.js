@@ -12,4 +12,5 @@ export const ROUTES = {
   BLOG_DETAILS: "/blog/:blogId",
   SERVICE_DETAILS: "/services/:serviceId",
   PRIVACY: "/privacy-policy",
+  SEARCH: "/search",
 };

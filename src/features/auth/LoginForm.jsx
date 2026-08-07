@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ROUTES } from "@/constants/routes";
 import { SOCIAL_LOGIN_PROVIDERS } from "@/constants/authData";
 import Button from "@/shared/buttons/Button";
@@ -13,7 +13,8 @@ const LoginForm = () => {
   const [formData, setFormData] = useState(INITIAL_STATE);
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const navigate = useNavigate();
+  
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
     setFormData((prev) => ({
@@ -25,8 +26,12 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
-    await loginUser(formData);
+    const response = await loginUser(formData);
     setIsSubmitting(false);
+
+    if (response.success) {
+      navigate(ROUTES.HOME);
+    }
   };
 
   return (

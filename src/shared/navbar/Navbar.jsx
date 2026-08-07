@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { ChevronDown, Search, Menu, X, ArrowRight } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import SearchBar from "@/shared/navbar/SearchBar";
 import { ROUTES } from "@/constants/routes";
 import { SERVICES_LIST } from "@/constants/services";
 import Button from "@/shared/buttons/Button";
@@ -111,9 +112,7 @@ const Navbar = () => {
         </nav>
 
         <div className={styles.actions}>
-          <button className={styles.iconButton} type="button" aria-label="Search">
-            <Search size={18} />
-          </button>
+          <SearchBar />
 
           <Link to={ROUTES.LOGIN} className={styles.loginLink}>
             Login

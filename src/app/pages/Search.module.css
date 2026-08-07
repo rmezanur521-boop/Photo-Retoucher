@@ -1,0 +1,48 @@
+.section {
+  padding: 60px 24px 80px;
+  background-color: var(--color-white);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.emptyState {
+  text-align: center;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  padding: 40px 0;
+}
+
+.group {
+  margin-bottom: 48px;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (max-width: 992px) {
+  .serviceGrid,
+  .blogGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .serviceGrid,
+  .blogGrid {
+    grid-template-columns: 1fr;
+  }
+}
