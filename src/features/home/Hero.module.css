@@ -147,7 +147,7 @@
 }
 
 .heroShapeLeft {
-  width: 100px !important;
+  width: 120px !important;
   opacity: 0.9;
 }
 
@@ -218,24 +218,24 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 1px;
-  height: 64px;
-  background: rgba(255, 255, 255, 0.15);
+  width: 2px;
+  height: 86px;
+  background: var(--color-primary);
 }
 
 .iconCircle {
-  width: 72px;
-  height: 72px;
+  width: 71px;
+  height: 71px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, var(--color-primary), #21409A);
 }
 
 .statIcon {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 31px;
 }
 
 .statText {

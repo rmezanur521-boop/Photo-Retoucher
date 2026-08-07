@@ -40,12 +40,14 @@ const PhotoEditingShowcase = () => {
           align="center"
         />
         <div className={styles.demo}>
-          <BeforeAfterCard
-            variant="plain"
-            beforeImage="/assets/images/hero-before.jpg"
-            afterImage="/assets/images/hero-after.jpg"
-            afterLabel="Before"
-          />
+          <div className={styles.heroCompare}>
+            <BeforeAfterCard
+              variant="plain"
+              beforeImage="/assets/images/hero-before.jpg"
+              afterImage="/assets/images/hero-after.jpg"
+              afterLabel="Before"
+            />
+          </div>
 
           <div className={styles.demoCaption}>
             <h3 className={styles.demoTitle}>Fine Feather Masking</h3>
